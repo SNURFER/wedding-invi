@@ -1,13 +1,16 @@
 <script>
-    const imgURL = 'image/main_image.jpeg';
+	const imgURL = 'image/main_image.jpeg';
 </script>
 
 <img src={imgURL} alt="intro" width="678" height="1024" class="w-full pb-5" />
 <div class="text-center justify-center modal-middle flex py-5 text-xl">
 	<span class="px-3">이시도</span>
-	<button on:click={() => (alert("since 2017/02/25, 하트수를 count 하자. 진입했을 때마다 딱 한번 밖에 못하게"))}>
-        <span class="px-3 text-xl text-primary">🖤</span>
-    </button>
+	<button
+		on:click={() =>
+			alert('since 2017/02/25, 하트수를 count 하자. 진입했을 때마다 딱 한번 밖에 못하게')}
+	>
+		<span class="px-3 text-xl text-primary">🖤</span>
+	</button>
 	<span class="px-3">장소영</span>
 </div>
 <div class="text-center py-5 text-lg">
