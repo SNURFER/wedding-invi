@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "clova-ai-my-wife";
+    src: url("./assets/clova_ai_my_wife.ttf");
+  }
