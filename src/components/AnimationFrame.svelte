@@ -1,20 +1,29 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte'
   
     // a bunch of variables defining the love and how it falls
-    const LOVEFLAKES_COUNT = 100 // on firefox should go smoothly up to 750
-    const LOVEFLAKE_MIN_SCALE = 0.1
-    const MELTING_SPEED = 1.12
-    const WIND_FORCE = 0.01
-    const FALL_SPEED = 0.15
-    const LOVE_ICONS = ['♡', '♥', '❤️','❣️','💕']
-    const TARGET_FPS = 60
+    const LOVEFLAKES_COUNT = 77; // on firefox should go smoothly up to 750
+    const LOVEFLAKE_MIN_SCALE = 0.1;
+    const MELTING_SPEED = 1.12;
+    const WIND_FORCE = 0.01;
+    const FALL_SPEED = 0.15;
+    const LOVE_ICONS = ['♡', '♥', '❤️','❣️','💕'];
+
+    const TARGET_FPS = 60;
   
-    const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS
-  
+    const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS;
+
+    interface SnowFlakeItem {
+      scale: number,
+      x: number,
+      y: number,
+      rotation: number,
+      loveIcon: any,
+      opacity: any | undefined,
+    }
+
     // this function generates the random configuration with all necessary values
-    // @ts-ignore
-    function randomLoveflakeConfig(i) {
+    function randomLoveflakeConfig(i: number): SnowFlakeItem {
       return {
         scale: LOVEFLAKE_MIN_SCALE + Math.random() * (1 - LOVEFLAKE_MIN_SCALE),
         x: -20 + Math.random() * 120,
@@ -27,52 +36,52 @@
   
     // actially generating the loveflakes
     let loveflakes = new Array(LOVEFLAKES_COUNT)
-      // @ts-ignore
-      .fill()
+      .fill(undefined)
       .map((_, i) => randomLoveflakeConfig(i))
       .sort((a, b) => a.scale - b.scale)
   
     // in onMount we define the loop function and start our animationFrame loop.
-    // @ts-ignore
-    onMount(async () => {
-      // @ts-ignore
-      let frame, lastTime
+    onMount(() => {
+      let frame: number;
+      let lastTime: number;
   
-      // @ts-ignore
-      function loop(timestamp) {
-        frame = requestAnimationFrame(loop)
+      function loop(timestamp: number | undefined) {
+        frame = requestAnimationFrame(loop);
   
-        // @ts-ignore
-        const elapsed = timestamp - lastTime
-        lastTime = timestamp
+        let framesCompleted: number;
+        if (timestamp === undefined) {
+          framesCompleted = 1;
+        } else {
+          const elapsed = timestamp - lastTime;
+          lastTime = timestamp;
   
-        let framesCompleted = elapsed / MS_BETWEEN_FRAMES
+          framesCompleted = elapsed / MS_BETWEEN_FRAMES;
+        }
   
         if (isNaN(framesCompleted)) {
-          framesCompleted = 1        
+          framesCompleted = 1;        
         }
   
         loveflakes = loveflakes.map(flake => {
           if (flake.y >= 100) {
-            flake.opacity = Math.pow(flake.opacity, MELTING_SPEED)
+            flake.opacity = Math.pow(flake.opacity, MELTING_SPEED);
           } else {
-            flake.y += FALL_SPEED * flake.scale * framesCompleted
-            flake.x += WIND_FORCE * flake.scale * framesCompleted
-            flake.rotation += 1 * framesCompleted
+            flake.y += FALL_SPEED * flake.scale * framesCompleted;
+            flake.x += WIND_FORCE * flake.scale * framesCompleted;
+            flake.rotation += 1 * framesCompleted;
           }
           if (flake.opacity <= 0.02) {
-            flake.y = -20
-            flake.x = -20 + Math.random() * 120
-            flake.opacity = 0.999
+            flake.y = -20;
+            flake.x = -20 + Math.random() * 120;
+            flake.opacity = 0.999;
           }
-          return flake
+          return flake;
         })
       }
   
-      loop()
+      loop(undefined);
   
-      // @ts-ignore
-      return () => cancelAnimationFrame(frame)
+      return () => cancelAnimationFrame(frame);
     })
   </script>
   

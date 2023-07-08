@@ -12,12 +12,10 @@
 
 </script>
   
-<main>
     <Header/>
     <MainImage/>
-    <div class="divider"/>
+    <div class="divider py-10"/>
     <MainMessage/>
     <div class="divider"/>
-</main>
     <AnimationFrame></AnimationFrame>
   
