@@ -6,6 +6,7 @@
 	import AnimationFrame from '../components/AnimationFrame.svelte';
 	import Calendar from '../components/Calendar.svelte';
 	import Location from '../components/Location.svelte';
+	import Gallery from '../components/Gallery.svelte';
 
 	onMount(() => {
 		// Perform any initialization or data fetching here
@@ -18,5 +19,6 @@
 <MainMessage />
 <div class="divider" />
 <Calendar year={2023} month={10} theDay={21} />
+<Gallery />
 <Location />
 <AnimationFrame />

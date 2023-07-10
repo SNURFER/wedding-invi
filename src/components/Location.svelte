@@ -5,15 +5,9 @@
 			><img src="/image/map.png" alt="" width="883" height="506" class="w-full" /></a
 		>
 		<div class="text-center px-5 py-5">
-			<a id="kakaotalk-sharing-btn" href="javascript:;" role="button" class="btn mx-2"
-				>카카오내비로 길 안내</a
-			>
-			<a id="kakaotalk-sharing-btn" href="javascript:;" role="button" class="btn mx-2"
-				>티맵으로 길 안내</a
-			>
-			<a id="kakaotalk-sharing-btn" href="javascript:;" role="button" class="btn mx-2"
-				>네이버지도로 길 안내</a
-			>
+			<a id="kakao-navi" href="javascript:;" role="button" class="btn mx-2">카카오내비로 길 안내</a>
+			<a id="tmap-navi" href="javascript:;" role="button" class="btn mx-2">티맵으로 길 안내</a>
+			<a id="naver-navi" href="javascript:;" role="button" class="btn mx-2">네이버지도로 길 안내</a>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">
 			<div>
