@@ -6,13 +6,13 @@
 		>
 		<div class="text-center px-5 py-5">
 			<a id="kakao-navi" href="http://kko.to/D9SAe_fxX" role="button" class="btn mx-2"
-				>카카오내비로 길 안내</a
+				><span class="text-xs">카카오 길안내</span></a
 			>
 			<a id="tmap-navi" href="https://surl.tmap.co.kr/42454e7e" role="button" class="btn mx-2"
-				>티맵으로 길 안내</a
+				><span class="text-xs">티맵 길안내</span></a
 			>
 			<a id="naver-navi" href="https://naver.me/5GyL1wzx" role="button" class="btn mx-2"
-				>네이버지도로 길 안내</a
+				><span class="text-xs">네이버 길안내</span></a
 			>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">

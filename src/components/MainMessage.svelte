@@ -7,18 +7,18 @@
 </script>
 
 <div class="container mx-auto relative">
-	<img src="/image/message_image.jpg" width="800" height="800" alt="" class="w-full h-auto" />
+	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
 	<!-- <div class="bg-red-300 w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4"> -->
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4">
-		<div class="w-full mx-auto px-5 py-20 text-center">
-			<p class="leading-relaxed text-base text-black">
+		<div class="w-full mx-auto text-center">
+			<p class="leading-relaxed text-xs text-black">
 				각자 다른 화분에 자란 넝쿨이<br />
 				서로에게 굴러 들어와<br />
 				7년동안 아름답게 얼기설기 엉켜 예쁜 꽃을 피웠습니다.<br />
 				이제는 하나의 화분에 모여<br />
 				새로운 출발을 하려합니다.<br />
 			</p>
-			<p class="leading-relaxed text-base text-black py-10">
+			<p class="leading-relaxed text-xs text-black py-3">
 				바쁘시더라도 발걸음 내주시어<br />
 				저희의 앞날에 단단한 토양이 되어주세요.<br />
 			</p>
