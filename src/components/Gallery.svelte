@@ -3,21 +3,21 @@
 
 	let images: string[] = [
 		'image/1.jpeg',
-		'image/2.jpeg',
-		'image/3.jpeg',
-		'image/4.jpeg',
-		'image/5.jpeg',
-		'image/7.jpeg',
-		'image/8.jpeg',
-		'image/9.jpeg',
-		'image/10.jpeg',
-		'image/11.jpeg',
-		'image/12.jpeg',
-		'image/13.jpeg',
-		'image/14.jpeg',
-		'image/15.jpeg',
-		'image/16.jpeg',
-		'image/17.jpeg'
+		'image/2.jpeg'
+		// 'image/3.jpeg',
+		// 'image/4.jpeg',
+		// 'image/5.jpeg',
+		// 'image/7.jpeg',
+		// 'image/8.jpeg',
+		// 'image/9.jpeg',
+		// 'image/10.jpeg',
+		// 'image/11.jpeg',
+		// 'image/12.jpeg',
+		// 'image/13.jpeg',
+		// 'image/14.jpeg',
+		// 'image/15.jpeg',
+		// 'image/16.jpeg',
+		// 'image/17.jpeg'
 		// Add more image URLs as needed
 	];
 
