@@ -1,3 +1,35 @@
+<script lang="ts">
+	//티맵 길안내
+	function tMap(name: string, lat: number, lng: number) {
+		const href =
+			'https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx7179ddde21ca4bfb8e6b03c710138f41&name=' +
+			name +
+			'&lon=' +
+			lng +
+			'&lat=' +
+			lat;
+		return href;
+	}
+
+	//카카오맵 길안내
+	function kakaoMap(name: string, lat: number, lng: number) {
+		const href = 'https://map.kakao.com/link/to/' + name + ',' + lat + ',' + lng;
+		return href;
+	}
+
+	//네이버맵 길안내
+	function naverMap(name: string, lat: number, lng: number) {
+		const href =
+			'http://app.map.naver.com/launchApp/?version=11&menu=navigation&elat=' +
+			lat +
+			'&elng=' +
+			lng +
+			'&etitle=' +
+			name;
+		return href;
+	}
+</script>
+
 <section>
 	<div class="py-3 mx-auto">
 		<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">오시는 길</h1>
@@ -5,14 +37,23 @@
 			><img src="/image/map.png" alt="" width="883" height="506" class="w-full" /></a
 		>
 		<div class="text-center px-5 py-5">
-			<a id="kakao-navi" href="http://kko.to/D9SAe_fxX" role="button" class="btn mx-2"
-				><span class="text-xs">카카오 길안내</span></a
+			<a
+				id="kakao-navi"
+				href={kakaoMap('교수회관', 37.457414, 126.954494)}
+				role="button"
+				class="btn mx-2"><span class="text-xs">카카오 길안내</span></a
 			>
-			<a id="tmap-navi" href="https://surl.tmap.co.kr/42454e7e" role="button" class="btn mx-2"
-				><span class="text-xs">티맵 길안내</span></a
+			<a
+				id="tmap-navi"
+				href={tMap('교수회관', 37.457414, 126.954494)}
+				role="button"
+				class="btn mx-2"><span class="text-xs">티맵 길안내</span></a
 			>
-			<a id="naver-navi" href="https://naver.me/5GyL1wzx" role="button" class="btn mx-2"
-				><span class="text-xs">네이버 길안내</span></a
+			<a
+				id="naver-navi"
+				href={naverMap('교수회관', 37.457414, 126.954494)}
+				role="button"
+				class="btn mx-2"><span class="text-xs">네이버 길안내</span></a
 			>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">
