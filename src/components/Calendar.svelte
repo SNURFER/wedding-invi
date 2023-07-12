@@ -64,72 +64,42 @@
 	}
 </script>
 
-<div class="py-10 flex flex-col w-full px-5 mt-4">
-	<div class="selected-month text-lg">
+<div class="py-10 flex flex-col w-full px-5 mt-4 text-center">
+	<div class="selected-month text-lg py-5">
 		{#if theDay !== undefined}
 			{monthNames[month - 1]}
 		{/if}
 	</div>
 
-	<div class="calendar">
+	<div class="grid grid-cols-7 gap-2">
 		{#each weekDays as dayName}
-			<div class="day">{dayName}</div>
+			<div class="p-2 text-center bg-gray-200 rounded">{dayName}</div>
 		{/each}
 
 		{#each days as week}
 			{#each week as { day, isCurrentMonth }}
-				<div
-					class:day={theDay === day}
-					class:selected={theDay === day}
-					class:is-other-month={isCurrentMonth === false}
-				>
-					{#if day !== null}
-						<span class:selected={theDay === day}>
-							{day}
-						</span>
+				{#if day !== null}
+					{#if day === theDay}
+						<div class="p-2 text-center bg-pink-100 rounded-full">
+							<span>{day}</span>
+						</div>
+					{:else}
+						<div class="p-2 text-center">
+							{#if !isCurrentMonth}
+								<span class="text-gray-400">{day}</span>
+							{:else}
+								<span>{day}</span>
+							{/if}
+						</div>
 					{/if}
-				</div>
+				{/if}
 			{/each}
 		{/each}
 	</div>
 	<div>
 		<p class="leading-relaxed mt-1" />
 	</div>
-	<div class="card p-4 my-2 bg-base-100 shadow-xl">
+	<div class="card p-4 my-2 bg-gray-100 shadow-xl">
 		<h2 class="text-lg font-bold title-font">{getDDay(2023, 10, 21)}</h2>
 	</div>
 </div>
-
-<style>
-	.calendar {
-		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-		gap: 0.5rem;
-	}
-
-	.day {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.5rem;
-		text-align: center;
-		background-color: #f0f0f0;
-		border-radius: 4px;
-	}
-
-	.selected {
-		background-color: #a9a9a9;
-		color: white;
-		font-weight: bold;
-	}
-
-	.selected-month {
-		text-align: center;
-		margin-bottom: 1rem;
-		font-weight: bold;
-	}
-
-	.day.is-other-month {
-		color: #888888;
-	}
-</style>

@@ -13,12 +13,4 @@ export const monthNames: string[] = [
 	'December'
 ];
 
-export const dayNames: string[] = [
-	'Sunday',
-	'Monday',
-	'Tuesday',
-	'Wednesday',
-	'Thursday',
-	'Friday',
-	'Saturday'
-];
+export const dayNames: string[] = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
