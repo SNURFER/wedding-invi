@@ -110,7 +110,6 @@
 		font-size: 1.2rem;
 		line-height: 1.2rem;
 		font-family: Arial, sans-serif;
-		text-shadow: 0 0 5px #000;
 		position: absolute;
 		z-index: 1000;
 		overflow: hidden;

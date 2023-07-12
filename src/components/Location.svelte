@@ -1,8 +1,25 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { env } from '$env/dynamic/public';
+
+	onMount(() => {
+		let mapOption = new naver.maps.Map('naverMap', {
+			center: new naver.maps.LatLng(37.45781, 126.954047), // 안내와 다르게 건물 근접 위,경도로 지정
+			zoom: 17
+		});
+
+		let marker = new naver.maps.Marker({
+			position: new naver.maps.LatLng(37.45781, 126.954047),
+			map: mapOption
+		});
+	});
+
 	//티맵 길안내
 	function tMap(name: string, lat: number, lng: number) {
 		const href =
-			'https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx7179ddde21ca4bfb8e6b03c710138f41&name=' +
+			'https://apis.openapi.sk.com/tmap/app/routes?appKey=' +
+			String(env.PUBLIC_TMAP_API_KEY) +
+			'&name=' +
 			name +
 			'&lon=' +
 			lng +
@@ -30,12 +47,18 @@
 	}
 </script>
 
+<svelte:head>
+	<script
+		defer
+		async
+		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId={env.PUBLIC_NAVER_API_KEY}"
+	></script>
+</svelte:head>
+
 <section>
 	<div class="py-3 mx-auto">
 		<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">오시는 길</h1>
-		<a href="<FILL_NAVER_MAPS_URL>" target="_blank"
-			><img src="/image/map.png" alt="" width="883" height="506" class="w-full" /></a
-		>
+		<div id="naverMap" class="w-full h-60" />
 		<div class="text-center px-5 py-5">
 			<a
 				id="kakao-navi"
