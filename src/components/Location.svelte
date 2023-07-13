@@ -67,7 +67,7 @@
 				class="btn mx-2"
 			>
 				<img src="image/kakao.png" height="10" width="10" alt="" />
-				<span class="text-xs">카카오 길안내</span>
+				<span class="text-xs">카카오 안내</span>
 			</a>
 			<a
 				id="tmap-navi"
@@ -76,7 +76,7 @@
 				class="btn mx-2"
 			>
 				<img src="image/tmap.png" height="10" width="10" alt="" />
-				<span class="text-xs">티맵 길안내</span>
+				<span class="text-xs">티맵 안내</span>
 			</a>
 			<a
 				id="naver-navi"
@@ -85,7 +85,7 @@
 				class="btn mx-2"
 			>
 				<img src="image/naver.png" height="10" width="10" alt="" />
-				<span class="text-xs">네이버 길안내</span>
+				<span class="text-xs">네이버 안내</span>
 			</a>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">
