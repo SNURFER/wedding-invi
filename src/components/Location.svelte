@@ -64,20 +64,29 @@
 				id="kakao-navi"
 				href={kakaoMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"><span class="text-xs">카카오 길안내</span></a
+				class="btn mx-2"
 			>
+				<img src="image/kakao.png" height="10" width="10" alt="" />
+				<span class="text-xs">카카오 길안내</span>
+			</a>
 			<a
 				id="tmap-navi"
 				href={tMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"><span class="text-xs">티맵 길안내</span></a
+				class="btn mx-2"
 			>
+				<img src="image/tmap.png" height="10" width="10" alt="" />
+				<span class="text-xs">티맵 길안내</span>
+			</a>
 			<a
 				id="naver-navi"
 				href={naverMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"><span class="text-xs">네이버 길안내</span></a
+				class="btn mx-2"
 			>
+				<img src="image/naver.png" height="10" width="10" alt="" />
+				<span class="text-xs">네이버 길안내</span>
+			</a>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">
 			<div>
