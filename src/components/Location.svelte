@@ -59,33 +59,33 @@
 	<div class="py-3 mx-auto">
 		<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">오시는 길</h1>
 		<div id="naverMap" class="w-full h-60" />
-		<div class="text-center px-5 py-5">
+		<div class="text-center px-2 py-5">
 			<a
 				id="kakao-navi"
 				href={kakaoMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"
+				class="btn rounded-lg mx-2"
 			>
 				<img src="image/kakao.png" height="10" width="10" alt="" />
-				<span class="text-xs">카카오 안내</span>
+				<span class="text-sm">카카오 지도</span>
 			</a>
 			<a
 				id="tmap-navi"
 				href={tMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"
+				class="btn mx-2 rounded-lg"
 			>
 				<img src="image/tmap.png" height="10" width="10" alt="" />
-				<span class="text-xs">티맵 안내</span>
+				<span class="text-sm">티맵 내비</span>
 			</a>
 			<a
 				id="naver-navi"
 				href={naverMap('교수회관', 37.457414, 126.954494)}
 				role="button"
-				class="btn mx-2"
+				class="btn mx-2 rounded-lg"
 			>
 				<img src="image/naver.png" height="10" width="10" alt="" />
-				<span class="text-xs">네이버 안내</span>
+				<span class="text-sm">네이버 지도</span>
 			</a>
 		</div>
 		<div class="flex flex-col w-full px-5 mt-4">
