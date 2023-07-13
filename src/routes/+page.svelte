@@ -20,5 +20,6 @@
 <div class="divider" />
 <Calendar year={2023} month={10} theDay={21} />
 <Gallery />
+<div class="divider" />
 <Location />
 <AnimationFrame />

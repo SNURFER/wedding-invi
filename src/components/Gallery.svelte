@@ -10,15 +10,17 @@
 		'image/7.jpeg',
 		'image/8.jpeg',
 		'image/9.jpeg',
-		'image/10.jpeg'
-		// 'image/11.jpeg',
-		// 'image/12.jpeg',
-		// 'image/13.jpeg',
-		// 'image/14.jpeg',
-		// 'image/15.jpeg',
-		// 'image/16.jpeg',
-		// 'image/17.jpeg'
-		// Add more image URLs as needed
+		'image/10.jpeg',
+		'image/11.jpeg',
+		'image/12.jpeg',
+		'image/13.jpeg',
+		'image/14.jpeg',
+		'image/15.jpeg',
+		'image/16.jpeg',
+		'image/17.jpeg',
+		'image/18.jpeg',
+		'image/19.jpeg',
+		'image/20.jpeg'
 	];
 
 	let currentIndex = 0;
@@ -33,11 +35,19 @@
 
 		if (deltaX > 50) {
 			// Swipe right
-			currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+			previousImage();
 		} else if (deltaX < -50) {
 			// Swipe left
-			currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+			nextImage();
 		}
+	}
+
+	function previousImage() {
+		currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+	}
+
+	function nextImage() {
+		currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
 	}
 
 	onMount(() => {
@@ -50,20 +60,43 @@
 	});
 </script>
 
-<!-- <div class="flex flex-col items-center"> -->
 <div class="mx-auto w-full">
 	<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">사진첩</h1>
 	<div class="mb-2" on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}>
 		<img class="max-w-full max-h-full" src={images[currentIndex]} alt="Image" />
 	</div>
-	<div class="flex justify-center mt-4">
-		{#each images as image, i (image)}
-			<img
-				class="h-10 mx-2 cursor-pointer"
-				src={image}
-				alt="Thumbnail"
-				on:click={() => (currentIndex = i)}
-			/>
-		{/each}
+	<div class="mt-4 flex justify-center">
+		<div class="thumbnail-container">
+			{#each images as image, i (image)}
+				<img
+					class="h-10 mx-2 cursor-pointer"
+					src={image}
+					alt="Thumbnail"
+					on:click={() => (currentIndex = i)}
+				/>
+			{/each}
+		</div>
 	</div>
 </div>
+
+<style>
+	.thumbnail-container {
+		display: flex;
+		overflow-x: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #ccc transparent;
+	}
+
+	.thumbnail-container::-webkit-scrollbar {
+		display: none;
+	}
+
+	.thumbnail-container::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	.thumbnail-container::-webkit-scrollbar-thumb {
+		background-color: #ccc;
+		border-radius: 4px;
+	}
+</style>
