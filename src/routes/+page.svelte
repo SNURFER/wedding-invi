@@ -7,6 +7,7 @@
 	import Calendar from '../components/Calendar.svelte';
 	import Location from '../components/Location.svelte';
 	import Gallery from '../components/Gallery.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	onMount(() => {
 		// Perform any initialization or data fetching here
@@ -22,4 +23,6 @@
 <Gallery />
 <div class="divider" />
 <Location />
+<Footer />
+
 <AnimationFrame />
