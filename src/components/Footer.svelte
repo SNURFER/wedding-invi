@@ -1,7 +1,7 @@
-<div class="w-full flex flex-col bg-stone-300 py-2">
-	<div class="max-w-xl w-full mx-auto flex flex-row space-x-2 text-sm justify-center items-center">
-		<span class="flex"> developed by </span>
-		<span class="flex fong-bold"> LSD </span>
+<div class="w-full bg-stone-300 py-2">
+	<div class="max-w-xl w-full mx-auto flex space-x-2 text-sm justify-center items-center">
+		<span> developed by </span>
+		<span class="text-lg font-bold text-gray-800"> LSD </span>
 		<a class="text-gray-400" href="https://github.com/SNURFER" target="_blank" rel="noreferrer">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5s"
 				><path

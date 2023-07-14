@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'clova-ai-my-wife';
-	src: url('/clova_ai_my_wife.ttf');
+	/* font-family: 'clova-ai-my-wife';
+	src: url('/clova_ai_my_wife.ttf'); */
+	/* font-family: 'clova-ai-dot-font';
+	src: url('/clova_ai_dot_font.ttf'); */
+	font-family: 'clova-ai-rose';
+	src: url('/clova_ai_rose.ttf');
 }

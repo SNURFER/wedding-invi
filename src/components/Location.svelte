@@ -57,9 +57,9 @@
 
 <section>
 	<div class="py-10 mx-auto">
-		<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">오시는 길</h1>
+		<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">오시는 길</h1>
 		<div id="naverMap" class="w-full h-60" />
-		<div class="text-center px-2 py-5">
+		<div class="text-center px-1 py-5">
 			<a
 				id="kakao-navi"
 				href={kakaoMap('교수회관', 37.457414, 126.954494)}

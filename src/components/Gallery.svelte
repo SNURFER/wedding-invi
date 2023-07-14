@@ -61,7 +61,7 @@
 </script>
 
 <div class="mx-auto w-full">
-	<h1 class="mb-8 text-2xl md:text-3xl font-bold text-center text-primary">사진첩</h1>
+	<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">사진첩</h1>
 	<div class="mb-2" on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}>
 		<img class="max-w-full max-h-full" src={images[currentIndex]} alt="Image" />
 	</div>

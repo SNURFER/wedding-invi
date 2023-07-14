@@ -8,7 +8,6 @@
 
 <div class="container mx-auto relative">
 	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
-	<!-- <div class="bg-red-300 w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4"> -->
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4">
 		<div class="w-full mx-auto text-center">
 			<p class="leading-relaxed text-xs text-black">

@@ -3,7 +3,9 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-			mywife: ['clova-ai-my-wife']
+			// mywife: ['clova-ai-my-wife']
+			// mywife: ['clova-ai-dot-font']
+			mywife: ['clova-ai-rose']
 		},
 		extend: {}
   },

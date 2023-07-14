@@ -65,7 +65,7 @@
 </script>
 
 <div class="py-10 flex flex-col w-full px-5 mt-4 text-center">
-	<div class="selected-month text-lg py-5">
+	<div class="selected-month text-3xl text-stone-500 py-5">
 		{#if theDay !== undefined}
 			{monthNames[month - 1]}
 		{/if}
