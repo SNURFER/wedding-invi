@@ -18,10 +18,10 @@
 <MainImage />
 <div class="divider py-10" />
 <MainMessage />
-<div class="divider" />
+<div class="divider py-10" />
 <Calendar year={2023} month={10} theDay={21} />
 <Gallery />
-<div class="divider" />
+<div class="divider py-10" />
 <Location />
 <Footer />
 
