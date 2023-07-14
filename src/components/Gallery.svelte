@@ -7,6 +7,7 @@
 		'image/3.jpeg',
 		'image/4.jpeg',
 		'image/5.jpeg',
+		'image/6.jpeg',
 		'image/7.jpeg',
 		'image/8.jpeg',
 		'image/9.jpeg',
@@ -62,18 +63,31 @@
 
 <div class="mx-auto w-full">
 	<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">사진첩</h1>
-	<div class="mb-2" on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}>
+	<div
+		class="mb-2 justify-center flex"
+		on:touchstart={handleTouchStart}
+		on:touchend={handleTouchEnd}
+	>
 		<img class="max-w-full max-h-full" src={images[currentIndex]} alt="Image" />
 	</div>
 	<div class="mt-4 flex justify-center">
 		<div class="thumbnail-container">
 			{#each images as image, i (image)}
-				<img
-					class="h-10 mx-2 cursor-pointer"
-					src={image}
-					alt="Thumbnail"
-					on:click={() => (currentIndex = i)}
-				/>
+				{#if i == currentIndex}
+					<img
+						class="h-10 mx-2 cursor-pointer border-2 border-black"
+						src={image}
+						alt="Thumbnail"
+						on:click={() => (currentIndex = i)}
+					/>
+				{:else}
+					<img
+						class="h-10 mx-2 cursor-pointer"
+						src={image}
+						alt="Thumbnail"
+						on:click={() => (currentIndex = i)}
+					/>
+				{/if}
 			{/each}
 		</div>
 	</div>
