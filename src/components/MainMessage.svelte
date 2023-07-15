@@ -1,6 +1,6 @@
 <h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">모시는 말씀</h1>
 <div class="container mx-auto relative">
-	<img src="/image/message_image2.png" alt="" class="w-full h-auto" />
+	<img src="/image/message_image5.png" alt="" class="w-full h-auto" />
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg">
 		<div class="w-full mx-auto text-center">
 			<p class="leading-relaxed text-base text-rose-400">
@@ -12,7 +12,7 @@
 			</p>
 			<p class="leading-relaxed text-base text-rose-400 py-3">
 				바쁘시더라도 발걸음 내주시어<br />
-				저희 앞날에 든든한 토양이 되어주세요.<br />
+				저희의 앞날에 든든한 토양이 되어주세요.<br />
 			</p>
 		</div>
 	</div>
@@ -20,10 +20,10 @@
 <div class="text-center mx-auto">
 	<div class="w-full mx-auto px-5 py-5">
 		<p class="tracking-wider text-xl text-center font-bold">
-			&nbsp 이병문•이명순 <span class="text-sm text-gray-500">&nbsp 의 차남</span> 이시도
+			&nbsp 이병문•이명순 <span class="text-sm text-gray-500">&nbsp 의 차남</span> 시도
 		</p>
 		<p class="tracking-wider text-xl text-center font-bold">
-			&nbsp 장재만•차순희 <span class="text-sm text-gray-500"> 의 차녀</span> 장소영
+			&nbsp 장재만•차순희 <span class="text-sm text-gray-500"> 의 차녀</span> 소영
 		</p>
 	</div>
 </div>
