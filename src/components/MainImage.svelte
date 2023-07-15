@@ -17,7 +17,7 @@
 	<span class="px-3">장소영</span>
 </div>
 <div class="text-center py-5 text-2xl">
-	<p>2023년 10월 21일, 오전 11시</p>
+	<p>2023년 10월 21일 (토), 오전 11시</p>
 	<p>서울대학교 교수회관</p>
 	<p class="text-sm text-gray-500">(호암 교수회관 아닙니다.)</p>
 </div>
