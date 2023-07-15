@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import Header from '../components/Header.svelte';
 	import MainImage from '../components/MainImage.svelte';
@@ -12,6 +12,7 @@
 	onMount(() => {
 		// Perform any initialization or data fetching here
 	});
+	let isTouched: boolean = false;
 </script>
 
 <svelte:head>
@@ -19,7 +20,7 @@
 </svelte:head>
 
 <Header />
-<MainImage />
+<MainImage bind:isTouched />
 <div class="divider py-10" />
 <MainMessage />
 <div class="divider py-10" />
@@ -29,4 +30,8 @@
 <Location />
 <Footer />
 
-<AnimationFrame />
+{#if !isTouched}
+	<AnimationFrame isHeartMode={true} />
+{:else}
+	<AnimationFrame isHeartMode={false} />
+{/if}

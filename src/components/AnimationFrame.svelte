@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	export let isHeartMode: boolean;
+
 	// a bunch of variables defining the love and how it falls
 	const LOVEFLAKES_COUNT = 77; // on firefox should go smoothly up to 750
 	const LOVEFLAKE_MIN_SCALE = 0.1;
 	const MELTING_SPEED = 1.12;
 	const WIND_FORCE = 0.01;
 	const FALL_SPEED = 0.15;
-	const LOVE_ICONS = ['♡', '♥', '❤️', '❣️', '💕'];
+	let LOVE_ICONS = ['♡', '♥', '❤️', '❣️', '💕'];
+	if (!isHeartMode) {
+		LOVE_ICONS = ['시도', '소영'];
+	}
 
 	const TARGET_FPS = 60;
 
@@ -109,7 +114,6 @@
 		color: #fff;
 		font-size: 1.2rem;
 		line-height: 1.2rem;
-		font-family: Arial, sans-serif;
 		position: absolute;
 		z-index: 1000;
 		overflow: hidden;
