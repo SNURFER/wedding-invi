@@ -29,11 +29,11 @@
 			transform: translateY(0);
 		}
 		50% {
-			transform: translateY(-3px);
+			transform: translateY(-4px);
 		}
 	}
 
 	.animate-bounce {
-		animation: bounce 0.5s infinite;
+		animation: bounce 0.6s infinite;
 	}
 </style>
