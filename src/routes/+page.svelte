@@ -8,6 +8,8 @@
 	import Location from '../components/Location.svelte';
 	import Gallery from '../components/Gallery.svelte';
 	import Footer from '../components/Footer.svelte';
+	import GuestBook from '../components/GuestBook.svelte';
+	import Account from '../components/Account.svelte';
 
 	onMount(() => {
 		// Perform any initialization or data fetching here
@@ -28,6 +30,9 @@
 <Gallery />
 <div class="divider py-10" />
 <Location />
+<GuestBook />
+<div class="divider" />
+<Account />
 <Footer />
 
 {#if !isTouched}
