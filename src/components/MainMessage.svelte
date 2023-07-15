@@ -8,19 +8,19 @@
 
 <h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">모시는 말씀</h1>
 <div class="container mx-auto relative">
-	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
+	<img src="/image/message_image2.png" alt="" class="w-full h-auto" />
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4">
 		<div class="w-full mx-auto text-center">
-			<p class="leading-relaxed text-xs text-black">
+			<p class="leading-relaxed text-base text-rose-300">
 				각자 다른 화분에 자란 넝쿨이<br />
 				서로에게 굴러 들어와<br />
 				7년동안 아름답게 얼기설기 엉켜 예쁜 꽃을 피웠습니다.<br />
 				이제는 하나의 화분에 모여<br />
 				새로운 출발을 하려합니다.<br />
 			</p>
-			<p class="leading-relaxed text-xs text-black py-3">
+			<p class="leading-relaxed text-base text-rose-300 py-3">
 				바쁘시더라도 발걸음 내주시어<br />
-				저희의 앞날에 든든한 토양이 되어주세요.<br />
+				저희 앞날에 든든한 토양이 되어주세요.<br />
 			</p>
 		</div>
 	</div>
