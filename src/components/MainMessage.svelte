@@ -27,9 +27,9 @@
 </div>
 <div class="text-center mx-auto">
 	<div class="w-full mx-auto px-5 py-5">
-		<p class="tracking-wider text-center font-bold">
-			이시도 • 장소영 <span class="text-xs">의 아들</span> 이시도 <br />이시도 • 장소영
-			<span class="text-xs">의 딸</span> 장소영
+		<p class="tracking-wider text-xl text-center font-bold">
+			이병문•이명순 <span class="text-sm text-gray-500">의 차남</span> 이시도 <br />장재만•차순희
+			<span class="text-sm text-gray-500">의 차녀</span> 장소영
 		</p>
 	</div>
 </div>
