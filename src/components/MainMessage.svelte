@@ -1,6 +1,6 @@
 <h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">모시는 말씀</h1>
 <div class="container mx-auto relative">
-	<img src="/image/message_image5.png" alt="" class="w-full h-auto" />
+	<img src="/image/message_image6.png" alt="" class="w-full h-auto" />
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg">
 		<div class="w-full mx-auto text-center">
 			<p class="leading-relaxed text-base text-rose-400">
