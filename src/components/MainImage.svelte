@@ -9,7 +9,7 @@
 		on:click={() =>
 			alert('since 2017/02/25, 하트수를 count 하자. 진입했을 때마다 딱 한번 밖에 못하게')}
 	>
-		<span class="px-3 text-xl text-primary">🩷</span>
+		<p class="animate-bounce px-3 text-xl text-primary">🩷</p>
 	</button>
 	<span class="px-3">장소영</span>
 </div>
