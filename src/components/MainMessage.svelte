@@ -6,6 +6,7 @@
 	const bridePhone = '01026329515';
 </script>
 
+<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">모시는 말씀</h1>
 <div class="container mx-auto relative">
 	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
 	<div class="w-1/2 h-1/2 absolute top-1/4 left-1/4 rounded-lg p-4">
@@ -19,7 +20,7 @@
 			</p>
 			<p class="leading-relaxed text-xs text-black py-3">
 				바쁘시더라도 발걸음 내주시어<br />
-				저희의 앞날에 단단한 토양이 되어주세요.<br />
+				저희의 앞날에 든든한 토양이 되어주세요.<br />
 			</p>
 		</div>
 	</div>

@@ -3,7 +3,7 @@
 </script>
 
 <img src={imgURL} alt="intro" width="678" height="1024" class="w-full pb-5" />
-<div class="text-center justify-center modal-middle flex py-5 text-xl">
+<div class="text-center justify-center modal-middle flex py-5 text-2xl">
 	<span class="px-3">이시도</span>
 	<button
 		on:click={() =>
@@ -13,8 +13,8 @@
 	</button>
 	<span class="px-3">장소영</span>
 </div>
-<div class="text-center py-5 text-lg">
+<div class="text-center py-5 text-2xl">
 	<p>2023년 10월 21일, 오전 11시</p>
 	<p>서울대학교 교수회관</p>
-	<p class="text-xs text-gray-500">(호암 교수회관 아닙니다.)</p>
+	<p class="text-sm text-gray-500">(호암 교수회관 아닙니다.)</p>
 </div>
