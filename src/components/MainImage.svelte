@@ -9,7 +9,7 @@
 		on:click={() =>
 			alert('since 2017/02/25, 하트수를 count 하자. 진입했을 때마다 딱 한번 밖에 못하게')}
 	>
-		<p class="animate-bounce px-3 text-xl text-primary">🩷</p>
+		<p class="btn animate-bounce px-3 text-xl text-primary">🩷</p>
 	</button>
 	<span class="px-3">장소영</span>
 </div>
@@ -18,3 +18,19 @@
 	<p>서울대학교 교수회관</p>
 	<p class="text-sm text-gray-500">(호암 교수회관 아닙니다.)</p>
 </div>
+
+<style>
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-3px);
+		}
+	}
+
+	.animate-bounce {
+		animation: bounce 0.5s infinite;
+	}
+</style>
