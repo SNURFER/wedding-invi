@@ -24,7 +24,7 @@
 		const gap = tarDate.getTime() - curDate.getTime();
 		const dday = Math.ceil(gap / (1000 * 60 * 60 * 24));
 		//TODO 숫자에만 하이라이트 빨간색으로
-		return '시도 ♥ 소영 결혼식이 ' + dday.toString() + ' 일 남았습니다.';
+		return '시도 🩷 소영 결혼식이 ' + dday.toString() + ' 일 남았습니다.';
 	}
 
 	function generateCalendarGrid() {
@@ -100,6 +100,6 @@
 		<p class="leading-relaxed mt-1" />
 	</div>
 	<div class="card p-4 my-2 bg-gray-100 shadow-xl">
-		<h2 class="text-lg font-bold title-font">{getDDay(2023, 10, 21)}</h2>
+		<h2 class="text-xl font-bold title-font">{getDDay(2023, 10, 21)}</h2>
 	</div>
 </div>
