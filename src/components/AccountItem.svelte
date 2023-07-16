@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { Icon } from 'svelte-awesome';
 	import copyIcon from 'svelte-awesome/icons/copy';
+	import { copyText } from 'svelte-copy';
 
 	export let name: string;
 	export let bank: string;
 	export let accountNum: string;
 
 	const copyAccount = async (accountInfo: string) => {
-		await navigator.clipboard.writeText(accountInfo);
+		await copyText(accountInfo);
 		alert('계좌번호가 복사되었습니다.');
 	};
 	const kakaoPay = async (accountInfo: string) => {
