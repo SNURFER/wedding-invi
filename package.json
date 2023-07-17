@@ -37,6 +37,10 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-awesome": "3.2.1"
+		"@popperjs/core": "2.11.8",
+		"flowbite": "1.7.0",
+		"flowbite-svelte": "0.39.3",
+		"svelte-awesome": "3.2.1",
+		"tailwind-merge": "1.14.0"
 	}
 }
