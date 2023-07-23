@@ -2,6 +2,7 @@
 	import { Icon } from 'svelte-awesome';
 	import copyIcon from 'svelte-awesome/icons/copy';
 	import copy from 'copy-to-clipboard';
+	import comment from 'svelte-awesome/icons/comment';
 
 	export let name: string;
 	export let bank: string;

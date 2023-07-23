@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { Modal } from 'flowbite-svelte';
+	import { Icon } from 'svelte-awesome';
+	import edit from 'svelte-awesome/icons/edit';
+	import trashO from 'svelte-awesome/icons/trashO';
 
 	export let guestMessages: Array<any>;
 	let defaultModal = false;
+	let overviewModal = false;
 
 	let name: string;
 	let password: string;
@@ -67,15 +71,50 @@
 	</div>
 	<div class="flex-row justify-end flex items-end">
 		<button
-			disabled
+			disabled={guestMessages.length === 0}
 			class="disabled:opacity-50 inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
-			on:click={() => {}}>전체보기</button
+			on:click={() => (overviewModal = true)}>전체보기</button
 		>
 		<button
 			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={() => (defaultModal = true)}>작성하기</button
 		>
 	</div>
+	<Modal title="모든 게시글" bind:open={overviewModal} autoclose>
+		<div class="flex flex-col overflow-y-auto divied-y space-y-8 scroll px-2">
+			{#each guestMessages as messageCard}
+				<div class="text-left text-sm break-all leading-5">
+					<div class="flex flex-row justify-between items-center mt-8">
+						<h1 class="text-base">{messageCard.name}</h1>
+						<div class="space-x-2">
+							<button disabled class="disabled:opacity-50">
+								<Icon data={edit} />
+							</button>
+							<button disabled class="disabled:opacity-50">
+								<Icon data={trashO} />
+							</button>
+						</div>
+					</div>
+					<div class="mt-2">
+						{messageCard.message}
+					</div>
+					<div class="text-right">
+						<span class="text-sm mt-8">
+							{messageCard.date}
+						</span>
+					</div>
+				</div>
+
+				<div class="divider" />
+			{/each}
+		</div>
+		<div class="flex flex-row justify-center mt-4">
+			<button
+				class="inline-block text-black rounded bg-gray-200 px-2 pb-[5px] pt-[6px] font-medium text-base"
+				>닫기</button
+			>
+		</div>
+	</Modal>
 	<Modal class="m-5" title="방명록 글 작성" bind:open={defaultModal} autoclose>
 		<div class="px-5 lg:px-8">
 			<form class="space-y-2">
