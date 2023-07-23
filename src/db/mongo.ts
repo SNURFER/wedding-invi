@@ -1,6 +1,6 @@
 // mongo.ts
 import { MongoClient, Db } from 'mongodb';
-import { MONGO_URL } from '$env/static/private';
+import { MONGO_URL, VITE_NODE_ENV } from '$env/static/private';
 
 let mongoClient: MongoClient | null = null;
 let database: Db | null = null;
@@ -10,7 +10,11 @@ export async function connectToDatabase() {
 		return { mongoClient, database };
 	}
 	mongoClient = await new MongoClient(MONGO_URL).connect();
-	database = await mongoClient.db('wedding-invi');
+	if (VITE_NODE_ENV === 'develop') {
+		database = await mongoClient.db('wedding-invi-dev');
+	} else {
+		database = await mongoClient.db('wedding-invi');
+	}
 	return { mongoClient, database };
 }
 
