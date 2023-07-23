@@ -8,7 +8,7 @@
 	export let accountNum: string;
 
 	const copyAccount = (accountInfo: string) => {
-		copy(accountInfo);
+		copy(accountInfo.replaceAll('-', ''));
 		alert('계좌번호가 복사되었습니다.');
 	};
 	const kakaoPay = async (accountInfo: string) => {
@@ -17,9 +17,9 @@
 </script>
 
 <div class="flex flex-row justify-center items-center">
-	<p class="text-sm px-1">{name}</p>
-	<p class="text-justify px-1 text-sm">{bank}</p>
-	<p class="text-justify px-1 text-sm">{accountNum}</p>
+	<p class="text-lg px-1">{name}</p>
+	<p class="text-justify px-1 text-lg">{bank}</p>
+	<p class="text-justify px-1 text-lg">{accountNum}</p>
 	<button
 		class="inline-block rounded bg-gray-200 px-2 m-1 pb-[5px] pt-[6px] text-xs font-medium"
 		on:click={() => copyAccount(accountNum)}>복사<Icon data={copyIcon} /></button
