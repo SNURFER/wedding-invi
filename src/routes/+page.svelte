@@ -10,8 +10,14 @@
 	import Footer from '../components/Footer.svelte';
 	import GuestBook from '../components/GuestBook.svelte';
 	import Account from '../components/Account.svelte';
-	onMount(() => {
+
+	let guestMessages: Array<any> = [];
+	onMount(async () => {
+		const res = await fetch('/api/guestbook');
+		guestMessages = (await res.json()).guestbooks.reverse();
 		// Perform any initialization or data fetching here
+
+		console.log(guestMessages);
 	});
 	let isTouched: boolean = false;
 </script>
@@ -29,7 +35,7 @@
 <Gallery />
 <div class="divider py-10" />
 <Location />
-<GuestBook />
+<GuestBook {guestMessages} />
 <div class="divider" />
 <Account />
 <Footer />

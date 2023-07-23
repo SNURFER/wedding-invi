@@ -1,23 +1,78 @@
 <script lang="ts">
 	import { Modal } from 'flowbite-svelte';
+
+	export let guestMessages: Array<any>;
 	let defaultModal = false;
 
 	let name: string;
 	let password: string;
 	let message: string;
 
-	function doPost() {
+	async function doPost() {
 		let result: string = '이름: ' + name + ', 비밀번호: ' + password + ', 메시지: ' + message;
 		alert(result);
+		const res = await fetch('/api/guestbook', {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				name,
+				password,
+				message
+			})
+		});
+
+		const { insertedId, date } = await res.json();
+		console.log(insertedId, date);
+
+		guestMessages = [
+			{
+				_id: insertedId,
+				name: name,
+				password: password,
+				message: message,
+				date: date
+			},
+			...guestMessages
+		];
+		name = '';
+		password = '';
+		message = '';
 	}
 </script>
 
 <div class="py-5 mx-auto">
 	<h1 class="text-3xl md:text-3xl font-bold text-center text-stone-500">방명록</h1>
 	<p class="text-gray-500 text-center">응원의 메시지를 남겨주시면 소중히 간직하겠습니다.</p>
-	<div class="flex-col justify-end flex items-end">
+	<div class="space-y-4">
+		<div class="overflow-x-auto flex w-full space-x-3 h-64 py-4 relative">
+			{#if guestMessages.length !== 0}
+				{#each guestMessages as messageCard}
+					<div
+						class="flex flex-col w-44 max-x-xl flex-none p-4 justify-between bg-stone-100 rounded-xl shadow-md"
+					>
+						<div class="overflow-hidden flex-col break-all text-ellipsis leading-5">
+							{messageCard.message}
+						</div>
+						<div class="text-right">
+							<h1>{messageCard.name}</h1>
+							<span>{messageCard.date.slice(0, -5)}</span>
+						</div>
+					</div>
+				{/each}
+			{/if}
+		</div>
+	</div>
+	<div class="flex-row justify-end flex items-end">
 		<button
-			class="inline-block text-black rounded bg-gray-200 px-2 m-10 pb-[5px] pt-[6px] font-medium text-base"
+			disabled
+			class="disabled:opacity-50 inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
+			on:click={() => {}}>전체보기</button
+		>
+		<button
+			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={() => (defaultModal = true)}>작성하기</button
 		>
 	</div>
