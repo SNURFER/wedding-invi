@@ -35,6 +35,7 @@
 <Gallery />
 <div class="divider py-10" />
 <Location />
+<div class="divider py-10" />
 <GuestBook {guestMessages} />
 <div class="divider" />
 <Account />

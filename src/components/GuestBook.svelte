@@ -3,6 +3,7 @@
 	import { Icon } from 'svelte-awesome';
 	import edit from 'svelte-awesome/icons/edit';
 	import trashO from 'svelte-awesome/icons/trashO';
+	import folderOpen from 'svelte-awesome/icons/folderOpen';
 
 	export let guestMessages: Array<any>;
 	let defaultModal = false;
@@ -52,10 +53,10 @@
 	<p class="text-gray-500 text-center">응원의 메시지를 남겨주시면 소중히 간직하겠습니다.</p>
 	<div class="space-y-4">
 		<div class="overflow-x-auto flex w-full space-x-3 h-64 py-4 relative">
-			{#if guestMessages.length !== 0}
-				{#each guestMessages as messageCard}
+			{#each guestMessages as messageCard, id}
+				{#if id < 20}
 					<div
-						class="flex flex-col w-44 max-x-xl flex-none p-4 justify-between bg-stone-100 rounded-xl shadow-md"
+						class="flex flex-col w-44 max-w-xl flex-none p-4 justify-between bg-stone-100 rounded-xl shadow-md"
 					>
 						<div class="overflow-hidden flex-col break-all text-ellipsis leading-5">
 							{messageCard.message}
@@ -65,8 +66,17 @@
 							<span>{messageCard.date.slice(0, -5)}</span>
 						</div>
 					</div>
-				{/each}
-			{/if}
+				{/if}
+			{/each}
+			<div class="flex flex-col rounded-xl w-44 max-w-xl flex-none p-4 justify-center items-center">
+				<button
+					on:click={() => (overviewModal = true)}
+					class="flex flex-col justify-center items-center space-y-2"
+				>
+					<Icon data={folderOpen} scale={2} />
+					<span>전체보기</span>
+				</button>
+			</div>
 		</div>
 	</div>
 	<div class="flex-row justify-end flex items-end">
