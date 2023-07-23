@@ -30,8 +30,8 @@
 <MainImage bind:isTouched />
 <div class="divider py-10" />
 <MainMessage />
-<div class="divider py-10" />
 <Calendar year={2023} month={10} theDay={21} />
+<div class="divider py-10" />
 <Gallery />
 <div class="divider py-10" />
 <Location />
