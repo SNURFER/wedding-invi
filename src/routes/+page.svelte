@@ -36,7 +36,7 @@
 <div class="divider py-10" />
 <Location />
 <div class="divider py-10" />
-<GuestBook {guestMessages} />
+<GuestBook bind:guestMessages />
 <div class="divider" />
 <Account />
 <Footer />

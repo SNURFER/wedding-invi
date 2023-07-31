@@ -32,3 +32,17 @@ export async function DELETE({ request }) {
 		insertedId: data._id
 	});
 }
+
+export async function PUT({ request }) {
+	const collection = await getGuestbookCollection();
+	const data = await request.json();
+	const res = await collection.updateOne(
+		{ _id: new ObjectId(data._id) },
+		{ $set: { message: data.message } }
+	);
+
+	return json({
+		insertedId: data._id,
+		message: data.message
+	});
+}

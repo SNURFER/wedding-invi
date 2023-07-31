@@ -4,11 +4,16 @@
 	import edit from 'svelte-awesome/icons/edit';
 	import trashO from 'svelte-awesome/icons/trashO';
 	import folderOpen from 'svelte-awesome/icons/folderOpen';
+	import GuestBookDialog from './GuestBookDialog.svelte';
+	import { DialogMode } from '../utils/utils';
 
 	export let guestMessages: Array<any>;
-	let defaultModal = false;
+	let createModal = false;
+	let editModal = false;
+	let deleteModal = false;
 	let overviewModal = false;
 
+	let messageID: string;
 	let name: string;
 	let password: string;
 	let message: string;
@@ -110,7 +115,11 @@
 		>
 		<button
 			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
-			on:click={() => (defaultModal = true)}>작성하기</button
+			on:click={() => {
+				createModal = true;
+				name = '';
+				message = '';
+			}}>작성하기</button
 		>
 	</div>
 	<Modal title="모든 게시글" bind:open={overviewModal} autoclose>
@@ -120,13 +129,26 @@
 					<div class="flex flex-row justify-between items-center mt-8">
 						<h1 class="text-base">{messageCard.name}</h1>
 						<div class="space-x-2">
-							<button disabled class="disabled:opacity-50">
+							<button
+								class="disabled:opacity-50"
+								on:click={() => {
+									messageID = messageCard._id;
+									name = messageCard.name;
+									password = '';
+									message = messageCard.message;
+									editModal = true;
+								}}
+							>
 								<Icon data={edit} />
 							</button>
 							<button
 								class="disabled:opacity-50"
 								on:click={() => {
-									doDelete(messageCard._id);
+									messageID = messageCard._id;
+									name = messageCard.name;
+									password = '';
+									message = messageCard.message;
+									deleteModal = true;
 								}}
 							>
 								<Icon data={trashO} />
@@ -153,47 +175,30 @@
 			>
 		</div>
 	</Modal>
-	<Modal class="m-5" title="방명록 글 작성" bind:open={defaultModal} autoclose>
-		<div class="px-5 lg:px-8">
-			<form class="space-y-2">
-				<div>
-					<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-						>이름</label
-					>
-					<input type="text" class="w-full input-bordered rounded-lg" required bind:value={name} />
-				</div>
-				<div>
-					<label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-						>비밀번호</label
-					>
-					<input
-						type="password"
-						class="w-full input-bordered rounded-lg"
-						maxlength="15"
-						required
-						bind:value={password}
-					/>
-				</div>
-				<div>
-					<label for="letter" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-						>내용</label
-					>
-					<textarea
-						class="textarea w-full rounded-lg textarea-bordered h-24 bg-white"
-						placeholder="메시지"
-						bind:value={message}
-					/>
-				</div>
-			</form>
-		</div>
-		<button
-			class="inline-block text-black rounded bg-gray-200 px-2 pb-[5px] pt-[6px] font-medium text-base disabled:opacity-50"
-			disabled={!name || !password || !message}
-			on:click={doPost}>작성하기</button
-		>
-		<button
-			class="inline-block text-black rounded bg-gray-200 px-2 pb-[5px] pt-[6px] font-medium text-base"
-			>닫기</button
-		>
-	</Modal>
+	<GuestBookDialog
+		dialogMode={DialogMode.CREATE}
+		bind:modalStatus={createModal}
+		bind:name
+		bind:password
+		bind:message
+		bind:guestMessages
+	/>
+	<GuestBookDialog
+		dialogMode={DialogMode.EDIT}
+		bind:modalStatus={editModal}
+		bind:_id={messageID}
+		bind:name
+		bind:password
+		bind:message
+		bind:guestMessages
+	/>
+	<GuestBookDialog
+		dialogMode={DialogMode.DELETE}
+		bind:modalStatus={deleteModal}
+		bind:_id={messageID}
+		bind:name
+		bind:password
+		bind:message
+		bind:guestMessages
+	/>
 </div>

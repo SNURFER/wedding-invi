@@ -14,3 +14,9 @@ export const monthNames: string[] = [
 ];
 
 export const dayNames: string[] = ['일', '월', '화', '수', '목', '금', '토'];
+
+export enum DialogMode {
+	EDIT,
+	CREATE,
+	DELETE
+}
