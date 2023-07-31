@@ -46,6 +46,29 @@
 		password = '';
 		message = '';
 	}
+
+	async function doDelete(id: string) {
+		const res = await fetch('/api/guestbook', {
+			method: 'DELETE',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				_id: id
+			})
+		});
+
+		let removeId: number = 0;
+
+		guestMessages.forEach((message, index) => {
+			if (message._id === id) {
+				removeId = index;
+			}
+		});
+		guestMessages.splice(removeId, 1);
+		guestMessages = [...guestMessages];
+	}
 </script>
 
 <div class="py-5 mx-auto">
@@ -100,7 +123,12 @@
 							<button disabled class="disabled:opacity-50">
 								<Icon data={edit} />
 							</button>
-							<button disabled class="disabled:opacity-50">
+							<button
+								class="disabled:opacity-50"
+								on:click={() => {
+									doDelete(messageCard._id);
+								}}
+							>
 								<Icon data={trashO} />
 							</button>
 						</div>

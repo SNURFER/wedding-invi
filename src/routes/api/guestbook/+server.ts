@@ -22,3 +22,13 @@ export async function POST({ request }) {
 		date: data.date
 	});
 }
+
+export async function DELETE({ request }) {
+	const collection = await getGuestbookCollection();
+	const data = await request.json();
+	collection.deleteOne({ _id: new ObjectId(data._id) });
+
+	return json({
+		insertedId: data._id
+	});
+}
