@@ -10,6 +10,16 @@
 	export let _id: string = '';
 	export let guestMessages: Array<any>;
 
+	let title: string;
+
+	if (dialogMode === DialogMode.CREATE) {
+		title = '방명록 글 작성';
+	} else if (dialogMode === DialogMode.EDIT) {
+		title = '방명록 글 수정';
+	} else {
+		title = '방명록 글 삭제';
+	}
+
 	async function doEdit() {
 		const res = await fetch('/api/guestbook', {
 			method: 'PUT',
@@ -89,7 +99,7 @@
 	}
 </script>
 
-<Modal class="m-5" title="방명록 글 작성" bind:open={modalStatus} autoclose>
+<Modal class="m-5" {title} bind:open={modalStatus} autoclose>
 	<div class="px-5 lg:px-8">
 		<form class="space-y-2">
 			<div>
