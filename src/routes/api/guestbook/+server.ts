@@ -26,10 +26,13 @@ export async function POST({ request }) {
 export async function DELETE({ request }) {
 	const collection = await getGuestbookCollection();
 	const data = await request.json();
-	collection.deleteOne({ _id: new ObjectId(data._id) });
+	const res = await collection.deleteOne({ _id: new ObjectId(data._id), password: data.password });
+
+	let isUpdated: boolean = res.deletedCount > 0 ? true : false;
 
 	return json({
-		insertedId: data._id
+		insertedId: data._id,
+		isUpdated: isUpdated
 	});
 }
 
@@ -37,12 +40,15 @@ export async function PUT({ request }) {
 	const collection = await getGuestbookCollection();
 	const data = await request.json();
 	const res = await collection.updateOne(
-		{ _id: new ObjectId(data._id) },
+		{ _id: new ObjectId(data._id), password: data.password },
 		{ $set: { message: data.message } }
 	);
 
+	let isUpdated: boolean = res.matchedCount > 0 ? true : false;
+
 	return json({
 		insertedId: data._id,
-		message: data.message
+		message: data.message,
+		isUpdated: isUpdated
 	});
 }

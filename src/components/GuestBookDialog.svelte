@@ -29,21 +29,26 @@
 			},
 			body: JSON.stringify({
 				_id,
+				password,
 				message
 			})
 		});
 
-		guestMessages.forEach((guestMessage) => {
-			if (guestMessage._id === _id) {
-				guestMessage.message = message;
-			}
-		});
-		guestMessages = [...guestMessages];
+		const { isUpdated } = await res.json();
+
+		if (isUpdated) {
+			guestMessages.forEach((guestMessage) => {
+				if (guestMessage._id === _id) {
+					guestMessage.message = message;
+				}
+			});
+			guestMessages = [...guestMessages];
+		} else {
+			alert('비밀번호가 틀렸습니다.');
+		}
 	}
 
 	async function doPost() {
-		let result: string = '이름: ' + name + ', 비밀번호: ' + password + ', 메시지: ' + message;
-		alert(result);
 		const res = await fetch('/api/guestbook', {
 			method: 'POST',
 			headers: {
@@ -73,6 +78,8 @@
 		name = '';
 		password = '';
 		message = '';
+
+		alert('작성하신 글이 등록되었습니다.');
 	}
 
 	async function doDelete() {
@@ -83,19 +90,25 @@
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				_id
+				_id,
+				password
 			})
 		});
 
-		let removeId: number = 0;
+		const { isUpdated } = await res.json();
+		if (isUpdated) {
+			let removeId: number = 0;
 
-		guestMessages.forEach((message, index) => {
-			if (message._id === _id) {
-				removeId = index;
-			}
-		});
-		guestMessages.splice(removeId, 1);
-		guestMessages = [...guestMessages];
+			guestMessages.forEach((message, index) => {
+				if (message._id === _id) {
+					removeId = index;
+				}
+			});
+			guestMessages.splice(removeId, 1);
+			guestMessages = [...guestMessages];
+		} else {
+			alert('비밀번호가 틀렸습니다.');
+		}
 	}
 </script>
 
