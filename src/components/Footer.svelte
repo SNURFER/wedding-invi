@@ -11,9 +11,7 @@
 	const description = '2023년 10월 21일 토요일 11시 서울대학교 교수회관';
 
 	onMount(() => {
-		// eslint-disable-next-line no-undef
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);
-		// eslint-disable-next-line no-undef
 		Kakao.Share.createDefaultButton({
 			container: '#kakao-share',
 			objectType: 'feed',
@@ -38,8 +36,6 @@
 		});
 	});
 
-	const initialize = () => {};
-
 	async function sharePage() {
 		if (navigator.share) {
 			navigator.share({
@@ -54,13 +50,7 @@
 </script>
 
 <svelte:head>
-	<script
-		defer
-		async
-		src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
-		integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
-		crossorigin="anonymous"
-	></script>
+	<script defer async src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"></script>
 </svelte:head>
 
 <section>
