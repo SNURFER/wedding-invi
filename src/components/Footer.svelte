@@ -5,18 +5,21 @@
 	import copy from 'copy-to-clipboard';
 
 	// share main image
-	// const imgURL = 'https://wedding-invi-one.vercel.app/image/main_image.jpeg';
-	const imgURL = 'image/main_image.jpeg';
+	const imageUrl = 'https://wedding-invi-one.vercel.app/image/main_image.jpeg';
+	const title = '이시도와 장소영의 결혼식에 초대합니다.';
+	const description = '2023년 10월 21일 토요일 11시 서울대학교 교수회관';
 
 	const initialize = () => {
+		// eslint-disable-next-line no-undef
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);
+		// eslint-disable-next-line no-undef
 		Kakao.Share.createDefaultButton({
-			container: '#kakaotalk-sharing-btn',
+			container: '#kakao-share',
 			objectType: 'feed',
 			content: {
-				title: '이시도와 장소영의 결혼식에 초대합니다.',
-				description: '2023년 10월 21일 토요일 11시 서울대학교 교수회관',
-				imageUrl: imgURL,
+				title,
+				description,
+				imageUrl,
 				link: {
 					mobileWebUrl: window.location.href,
 					webUrl: window.location.href
@@ -59,14 +62,14 @@
 <section>
 	<div class="text-center px-5 py-5">
 		<a
-			id="kakaotalk-sharing-btn"
+			id="kakao-share"
 			href="javascript:;"
 			role="button"
-			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
-			>카카오로 공유</a
+			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[11px] font-medium text-base"
+			>카카오톡으로 공유</a
 		>
 		<button
-			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
+			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={sharePage}>링크로 공유</button
 		>
 	</div>
