@@ -13,13 +13,11 @@ export async function GET() {
 export async function POST({ request }) {
 	const collection = await getGuestbookCollection();
 	const data = await request.json();
-	data.date = new Date();
 	const res = await collection.insertOne(data);
 	console.log(res.insertedId);
 
 	return json({
-		insertedId: res.insertedId,
-		date: data.date
+		insertedId: res.insertedId
 	});
 }
 

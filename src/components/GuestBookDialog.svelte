@@ -48,7 +48,21 @@
 		}
 	}
 
+	const getCurDateStr = () => {
+		const date = new Date();
+		const year = date.getFullYear();
+		const month = date.getMonth();
+		const day = date.getDate();
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+
+		const curDateStr: string =
+			year + '년 ' + month + '월 ' + day + '일 ' + hours + '시 ' + minutes + '분 ';
+		return curDateStr;
+	};
+
 	async function doPost() {
+		const postDate = getCurDateStr();
 		const res = await fetch('/api/guestbook', {
 			method: 'POST',
 			headers: {
@@ -58,12 +72,12 @@
 			body: JSON.stringify({
 				name,
 				password,
-				message
+				message,
+				date: postDate
 			})
 		});
 
 		const { insertedId, date } = await res.json();
-		console.log(insertedId, date);
 
 		guestMessages = [
 			{
@@ -71,7 +85,7 @@
 				name: name,
 				password: password,
 				message: message,
-				date: date
+				date: postDate
 			},
 			...guestMessages
 		];

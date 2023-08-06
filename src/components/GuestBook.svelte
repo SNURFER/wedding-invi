@@ -17,63 +17,6 @@
 	let name: string;
 	let password: string;
 	let message: string;
-
-	async function doPost() {
-		let result: string = '이름: ' + name + ', 비밀번호: ' + password + ', 메시지: ' + message;
-		alert(result);
-		const res = await fetch('/api/guestbook', {
-			method: 'POST',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				name,
-				password,
-				message
-			})
-		});
-
-		const { insertedId, date } = await res.json();
-		console.log(insertedId, date);
-
-		guestMessages = [
-			{
-				_id: insertedId,
-				name: name,
-				password: password,
-				message: message,
-				date: date
-			},
-			...guestMessages
-		];
-		name = '';
-		password = '';
-		message = '';
-	}
-
-	async function doDelete(id: string) {
-		const res = await fetch('/api/guestbook', {
-			method: 'DELETE',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				_id: id
-			})
-		});
-
-		let removeId: number = 0;
-
-		guestMessages.forEach((message, index) => {
-			if (message._id === id) {
-				removeId = index;
-			}
-		});
-		guestMessages.splice(removeId, 1);
-		guestMessages = [...guestMessages];
-	}
 </script>
 
 <div class="py-5 mx-auto">
@@ -91,7 +34,7 @@
 						</div>
 						<div class="text-right">
 							<h1>{messageCard.name}</h1>
-							<span>{messageCard.date.slice(0, -5)}</span>
+							<span>{messageCard.date}</span>
 						</div>
 					</div>
 				{/if}
