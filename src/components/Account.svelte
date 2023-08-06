@@ -8,6 +8,7 @@
 	const brideName = '장소영';
 	const brideBank = '국민';
 	const brideAccountNum = '079-80204-183334';
+	const brideKakaoURL = 'https://qr.kakaopay.com/Ej8EyRNMa';
 </script>
 
 <div class="py-5 mb-20">
@@ -23,6 +24,11 @@
 	</details>
 	<details class="text-center m-2">
 		<summary class="cursor-pointer text-lg">신부측 계좌번호</summary>
-		<AccountItem name={brideName} bank={brideBank} accountNum={brideAccountNum} />
+		<AccountItem
+			name={brideName}
+			bank={brideBank}
+			accountNum={brideAccountNum}
+			kakaoURL={brideKakaoURL}
+		/>
 	</details>
 </div>
