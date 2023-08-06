@@ -2,7 +2,6 @@
 	import { Icon } from 'svelte-awesome';
 	import copyIcon from 'svelte-awesome/icons/copy';
 	import copy from 'copy-to-clipboard';
-	import comment from 'svelte-awesome/icons/comment';
 
 	export let name: string;
 	export let bank: string;
@@ -26,7 +25,7 @@
 	{#if kakaoURL.length > 0}
 		<a
 			class="inline-block rounded bg-gray-200 px-2 m-1 pb-[9px] pt-[10px] text-xs font-medium"
-			href="https://qr.kakaopay.com/Ej8iC3z3c"
+			href={kakaoURL}
 			target="_blank"
 			rel="noreferrer"
 		>
