@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import githubSquare from 'svelte-awesome/icons/githubSquare';
 	import { Icon } from 'svelte-awesome';
 	import { env } from '$env/dynamic/public';
@@ -9,7 +10,7 @@
 	const title = '이시도와 장소영의 결혼식에 초대합니다.';
 	const description = '2023년 10월 21일 토요일 11시 서울대학교 교수회관';
 
-	const initialize = () => {
+	onMount(() => {
 		// eslint-disable-next-line no-undef
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);
 		// eslint-disable-next-line no-undef
@@ -35,7 +36,9 @@
 				}
 			]
 		});
-	};
+	});
+
+	const initialize = () => {};
 
 	async function sharePage() {
 		if (navigator.share) {
@@ -52,10 +55,11 @@
 
 <svelte:head>
 	<script
+		defer
+		async
 		src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
 		integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
 		crossorigin="anonymous"
-		on:load={initialize}
 	></script>
 </svelte:head>
 
