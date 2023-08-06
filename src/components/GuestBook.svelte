@@ -110,11 +110,11 @@
 	<div class="flex-row justify-end flex items-end">
 		<button
 			disabled={guestMessages.length === 0}
-			class="disabled:opacity-50 inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
+			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={() => (overviewModal = true)}>전체보기</button
 		>
 		<button
-			class="inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
+			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={() => {
 				createModal = true;
 				name = '';
