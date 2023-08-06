@@ -5,8 +5,8 @@
 	import copy from 'copy-to-clipboard';
 
 	// share main image
-	const imgURL = 'https://wedding-invi-one.vercel.app/image/main_image.jpeg';
-	// const imgURL = 'image/main_image.jpeg';
+	// const imgURL = 'https://wedding-invi-one.vercel.app/image/main_image.jpeg';
+	const imgURL = 'image/main_image.jpeg';
 
 	const initialize = () => {
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);
