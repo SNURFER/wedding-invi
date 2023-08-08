@@ -16,8 +16,6 @@
 		const res = await fetch('/api/guestbook');
 		guestMessages = (await res.json()).guestbooks.reverse();
 		// Perform any initialization or data fetching here
-
-		console.log(guestMessages);
 	});
 	let isTouched: boolean = false;
 </script>
