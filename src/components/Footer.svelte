@@ -50,7 +50,12 @@
 </script>
 
 <svelte:head>
-	<script defer async src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"></script>
+	<script
+		src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
+		integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
+		crossorigin="anonymous"
+	>
+	</script>
 </svelte:head>
 
 <section>
