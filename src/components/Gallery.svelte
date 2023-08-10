@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { register } from 'swiper/element/bundle';
 	register();
 
@@ -36,6 +35,8 @@
 			navigation={true}
 			pagination={true}
 			centered-slides={true}
+			setWrapperSize={true}
+			a11y={true}
 		>
 			{#each images as image, i (image)}
 				<swiper-slide>
@@ -44,7 +45,7 @@
 			{/each}
 		</swiper-container>
 	</div>
-	<swiper-container class="my-thumbs" slides-per-view={5} navigation="true">
+	<swiper-container a11y={true} space-between={10} class="my-thumbs" slides-per-view={5}>
 		{#each images as image, i (image)}
 			<swiper-slide>
 				<img class="thumb-img" src={image} alt="Thumbnail" />
