@@ -42,6 +42,7 @@
 		"flowbite-svelte": "0.39.3",
 		"mongodb": "5.7.0",
 		"svelte-awesome": "3.2.1",
+		"swiper": "10.1.0",
 		"tailwind-merge": "1.14.0"
 	}
 }

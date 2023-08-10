@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { register } from 'swiper/element/bundle';
+	register();
 
 	let images: string[] = [
 		'image/1.jpeg',
@@ -23,94 +25,50 @@
 		'image/19.jpeg',
 		'image/20.jpeg'
 	];
-
-	let currentIndex = 0;
-	let startX = 0;
-
-	function handleTouchStart(event: TouchEvent) {
-		startX = event.touches[0].clientX;
-	}
-
-	function handleTouchEnd(event: TouchEvent) {
-		const deltaX = event.changedTouches[0].clientX - startX;
-
-		if (deltaX > 50) {
-			// Swipe right
-			previousImage();
-		} else if (deltaX < -50) {
-			// Swipe left
-			nextImage();
-		}
-	}
-
-	function previousImage() {
-		currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-	}
-
-	function nextImage() {
-		currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-	}
-
-	onMount(() => {
-		// Clean up the component when it is unmounted
-		return () => {
-			// Reset the currentIndex and startX variables
-			currentIndex = 0;
-			startX = 0;
-		};
-	});
 </script>
 
 <div class="mx-auto w-full">
 	<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">사진첩</h1>
-	<div
-		class="mb-2 justify-center flex"
-		on:touchstart={handleTouchStart}
-		on:touchend={handleTouchEnd}
-	>
-		<img class="max-w-full max-h-full" src={images[currentIndex]} alt="Image" />
-	</div>
-	<div class="mt-4 flex justify-center">
-		<div class="thumbnail-container">
+	<div class="mb-2">
+		<swiper-container
+			thumbs-swiper=".my-thumbs"
+			slides-per-view={1}
+			navigation={true}
+			pagination={true}
+			centered-slides={true}
+		>
 			{#each images as image, i (image)}
-				{#if i == currentIndex}
-					<img
-						class="h-10 mx-2 cursor-pointer border-2 border-black"
-						src={image}
-						alt="Thumbnail"
-						on:click={() => (currentIndex = i)}
-					/>
-				{:else}
-					<img
-						class="h-10 mx-2 cursor-pointer"
-						src={image}
-						alt="Thumbnail"
-						on:click={() => (currentIndex = i)}
-					/>
-				{/if}
+				<swiper-slide>
+					<img src={image} alt="Thumbnail" />
+				</swiper-slide>
 			{/each}
-		</div>
+		</swiper-container>
 	</div>
+	<swiper-container class="my-thumbs" slides-per-view={5} navigation="true">
+		{#each images as image, i (image)}
+			<swiper-slide>
+				<img class="thumb-img" src={image} alt="Thumbnail" />
+			</swiper-slide>
+		{/each}
+	</swiper-container>
 </div>
 
 <style>
-	.thumbnail-container {
-		display: flex;
-		overflow-x: auto;
-		scrollbar-width: thin;
-		scrollbar-color: #ccc transparent;
+	swiper-container::part(bullet-active) {
+		background-color: gray;
 	}
-
-	.thumbnail-container::-webkit-scrollbar {
-		display: none;
+	swiper-container::part(bullet) {
+		background-color: gray;
 	}
-
-	.thumbnail-container::-webkit-scrollbar-track {
-		background-color: transparent;
+	swiper-container::part(button-prev) {
+		color: gray;
 	}
-
-	.thumbnail-container::-webkit-scrollbar-thumb {
-		background-color: #ccc;
-		border-radius: 4px;
+	swiper-container::part(button-next) {
+		color: gray;
+	}
+	.thumb-img {
+		object-fit: cover;
+		aspect-ratio: 1 / 1.3;
+		width: 100%;
 	}
 </style>
