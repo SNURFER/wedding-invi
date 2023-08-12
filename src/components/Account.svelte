@@ -5,6 +5,10 @@
 	const groomBank = '농협';
 	const groomAccountNum = '302-0930-5145-81';
 	const groomKakaoURL = 'https://qr.kakaopay.com/Ej8iC3z3c';
+	const groomMotherName = '이명순';
+	const groomMotherBank = '국민';
+	const groomMotherAccountNum = '818-24-0059-439';
+
 	const brideName = '장소영';
 	const brideBank = '국민';
 	const brideAccountNum = '079-80204-183334';
@@ -21,6 +25,7 @@
 			accountNum={groomAccountNum}
 			kakaoURL={groomKakaoURL}
 		/>
+		<AccountItem name={groomMotherName} bank={groomMotherBank} accountNum={groomMotherAccountNum} />
 	</details>
 	<details class="text-center m-2">
 		<summary class="cursor-pointer text-lg">신부측 계좌번호</summary>

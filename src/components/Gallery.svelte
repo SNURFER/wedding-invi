@@ -34,13 +34,12 @@
 			slides-per-view={1}
 			navigation={true}
 			pagination={true}
-			centered-slides={true}
 			setWrapperSize={true}
 			a11y={true}
 			rewind={true}
 		>
 			{#each images as image, i (image)}
-				<swiper-slide>
+				<swiper-slide class="flex justify-center items-center">
 					<img src={image} alt="Thumbnail" />
 				</swiper-slide>
 			{/each}
