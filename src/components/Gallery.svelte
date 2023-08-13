@@ -2,6 +2,30 @@
 	import { register } from 'swiper/element/bundle';
 	register();
 
+	let isSwipingMode = false;
+
+	const onProgress = (e: any) => {
+		const [swiper, progress] = e.detail;
+
+		if (progress !== 0) {
+			isSwipingMode = true;
+		} else {
+			isSwipingMode = false;
+		}
+	};
+
+	const onSlideAnimationEnded = (e: any) => {
+		isSwipingMode = false;
+	};
+
+	const preventTouch = (e: any) => {
+		if (isSwipingMode) {
+			e.preventDefault();
+			e.returnValue = false;
+			return false;
+		}
+	};
+
 	let images: string[] = [
 		'image/1.jpeg',
 		'image/2.jpeg',
@@ -37,6 +61,10 @@
 			setWrapperSize={true}
 			a11y={true}
 			rewind={true}
+			on:progress={onProgress}
+			on:slidechange={onSlideAnimationEnded}
+			on:touchmove={preventTouch}
+			on:slideresettransitionend={onSlideAnimationEnded}
 		>
 			{#each images as image, i (image)}
 				<swiper-slide class="flex justify-center items-center">
