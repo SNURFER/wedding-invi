@@ -37,9 +37,6 @@
 			setWrapperSize={true}
 			a11y={true}
 			rewind={true}
-			touchMoveStopPropagation={true}
-			touchStartForcePreventDefault={true}
-			touchStartPreventDefault={false}
 		>
 			{#each images as image, i (image)}
 				<swiper-slide class="flex justify-center items-center">
@@ -54,9 +51,6 @@
 		space-between={10}
 		class="my-thumbs"
 		slides-per-view={5}
-		touchMoveStopPropagation={true}
-		touchStartForcePreventDefault={true}
-		touchStartPreventDefault={false}
 	>
 		{#each images as image, i (image)}
 			<swiper-slide>
