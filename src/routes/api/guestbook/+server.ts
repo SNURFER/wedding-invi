@@ -24,7 +24,10 @@ export async function POST({ request }) {
 export async function DELETE({ request }) {
 	const collection = await getGuestbookCollection();
 	const data = await request.json();
-	const res = await collection.deleteOne({ _id: new ObjectId(data._id), password: data.password });
+	const res = await collection.deleteOne({
+		_id: new ObjectId(data._id),
+		password: String(data.password)
+	});
 
 	let isUpdated: boolean = res.deletedCount > 0 ? true : false;
 
