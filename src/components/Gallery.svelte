@@ -79,6 +79,10 @@
 		space-between={10}
 		class="my-thumbs"
 		slides-per-view={5}
+		on:progress={onProgress}
+		on:slidechange={onSlideAnimationEnded}
+		on:touchmove={preventTouch}
+		on:slideresettransitionend={onSlideAnimationEnded}
 	>
 		{#each images as image, i (image)}
 			<swiper-slide>
