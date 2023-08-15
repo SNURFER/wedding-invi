@@ -6,8 +6,6 @@ export default {
 	],
 	theme: {
 		fontFamily: {
-			// mywife: ['clova-ai-my-wife']
-			// mywife: ['clova-ai-dot-font']
 			mywife: ['clova-ai-rose']
 		},
 		extend: {
