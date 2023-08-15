@@ -100,9 +100,13 @@
 <style>
 	swiper-container::part(bullet-active) {
 		background-color: gray;
+		width: 5px;
+		height: 5px;
 	}
 	swiper-container::part(bullet) {
 		background-color: gray;
+		width: 5px;
+		height: 5px;
 	}
 	swiper-container::part(button-prev) {
 		color: gray;
