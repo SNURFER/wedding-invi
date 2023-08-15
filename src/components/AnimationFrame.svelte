@@ -111,7 +111,7 @@
 	}
 
 	.loveflake {
-		color: #ffb6c1;
+		color: #fff;
 		font-size: 1.2rem;
 		line-height: 1.2rem;
 		position: absolute;
