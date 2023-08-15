@@ -67,7 +67,6 @@
 			pagination={true}
 			setWrapperSize={true}
 			a11y={true}
-			rewind={true}
 			on:progress={onProgress}
 			on:slidechange={onSlideAnimationEnded}
 			on:touchmove={preventTouch}
@@ -81,7 +80,6 @@
 		</swiper-container>
 	</div>
 	<swiper-container
-		rewind={true}
 		a11y={true}
 		space-between={10}
 		class="my-thumbs"
