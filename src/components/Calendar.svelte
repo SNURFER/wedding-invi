@@ -80,7 +80,7 @@
 			{#each week as { day, isCurrentMonth }}
 				{#if day !== null}
 					{#if day === theDay}
-						<div class="p-2 text-center bg-pink-200 rounded-full">
+						<div class="p-2 text-center bg-pink-300 rounded-full">
 							<span>{day}</span>
 						</div>
 					{:else}
