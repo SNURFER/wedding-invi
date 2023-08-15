@@ -20,10 +20,10 @@
 <div class="text-center mx-auto">
 	<div class="w-full mx-auto px-5 py-5">
 		<p class="tracking-wider text-xl text-center font-bold">
-			&nbsp 이병문•이명순 <span class="text-sm text-gray-500">&nbsp 의 차남</span> 시도
+			&nbsp&nbsp 이병문 •&nbsp이명순 <span class="text-sm text-gray-500">&nbsp 의 차남</span> 시도
 		</p>
 		<p class="tracking-wider text-xl text-center font-bold">
-			&nbsp 장재만•차순희 <span class="text-sm text-gray-500"> 의 차녀</span> 소영
+			&nbsp 장재만 • 차순희 <span class="text-sm text-gray-500"> &nbsp의 차녀</span> 소영
 		</p>
 	</div>
 </div>
