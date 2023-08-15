@@ -71,10 +71,13 @@
 			on:slidechange={onSlideAnimationEnded}
 			on:touchmove={preventTouch}
 			on:slideresettransitionend={onSlideAnimationEnded}
+			class="main-slider"
 		>
 			{#each images as image, i (image)}
 				<swiper-slide class="flex justify-center items-center">
-					<img src={image} alt="Thumbnail" />
+					<div class="image-container">
+						<img src={image} alt="Thumbnail" />
+					</div>
 				</swiper-slide>
 			{/each}
 		</swiper-container>
@@ -118,5 +121,28 @@
 		object-fit: cover;
 		aspect-ratio: 1 / 1.3;
 		width: 100%;
+	}
+	/* Center the slides within the main swiper-container */
+	.main-slider {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 700px; /* Set your desired fixed height */
+	}
+
+	/* Style for the main images */
+	.image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.image-container img {
+		max-height: 100%;
+		max-width: 100%;
+		object-fit: contain; /* Adjust the object-fit value as needed */
 	}
 </style>
