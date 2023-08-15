@@ -20,7 +20,7 @@
 </script>
 
 <div class="py-5 mx-auto">
-	<h1 class="text-3xl md:text-3xl font-bold text-center text-stone-500">방명록</h1>
+	<h1 class="text-3xl md:text-3xl font-bold text-center text-stone-600">방명록</h1>
 	<p class="text-gray-500 text-center">응원의 메시지를 남겨주시면 소중히 간직하겠습니다.</p>
 	<div class="space-y-4">
 		<div class="overflow-x-auto flex w-full space-x-3 h-64 py-4 relative">

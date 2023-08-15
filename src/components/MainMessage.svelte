@@ -1,4 +1,4 @@
-<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">모시는 말씀</h1>
+<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-600">모시는 말씀</h1>
 <div class="container mx-auto relative">
 	<img src="/image/message_image8.png" alt="" class="w-full h-auto" />
 	<div class="absolute inset-0 flex items-center justify-center rounded-lg">

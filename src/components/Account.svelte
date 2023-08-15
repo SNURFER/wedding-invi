@@ -16,7 +16,7 @@
 </script>
 
 <div class="py-5 mb-20">
-	<h1 class="text-3xl md:text-3xl m-5 font-bold text-center text-stone-500">마음 전하실 곳</h1>
+	<h1 class="text-3xl md:text-3xl m-5 font-bold text-center text-stone-600">마음 전하실 곳</h1>
 	<details class="text-center m-2">
 		<summary class="cursor-pointer text-lg">신랑측 계좌번호</summary>
 		<AccountItem

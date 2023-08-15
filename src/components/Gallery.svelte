@@ -58,7 +58,7 @@
 </script>
 
 <div class="mx-auto w-full">
-	<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">사진첩</h1>
+	<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-600">사진첩</h1>
 	<div class="mb-2">
 		<swiper-container
 			thumbs-swiper=".my-thumbs"

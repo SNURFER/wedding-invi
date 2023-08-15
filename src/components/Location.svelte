@@ -55,7 +55,7 @@
 
 <section>
 	<div class="py-5 mx-auto">
-		<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-500">오시는 길</h1>
+		<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-600">오시는 길</h1>
 		<div class="text-center py-2 text-xl">
 			<p>서울대학교 교수회관</p>
 			<p class="text-gray-500 text-base">서울 관악구 관악로 1 65동</p>

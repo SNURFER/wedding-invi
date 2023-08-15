@@ -32,9 +32,6 @@ export default {
 	},
 	plugins: [require('daisyui'), require('flowbite/plugin')],
 	daisyui: {
-		// themes: ['garden']
-		// themes: ['valentine']
-		// themes: ['winter']
-		themes: ['pastel']
+		themes: ['autumn']
 	}
 };
