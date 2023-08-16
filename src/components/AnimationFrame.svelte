@@ -4,7 +4,7 @@
 	export let isHeartMode: boolean;
 
 	// a bunch of variables defining the love and how it falls
-	const LOVEFLAKES_COUNT = 121; // on firefox should go smoothly up to 750
+	const LOVEFLAKES_COUNT = 100; // on firefox should go smoothly up to 750
 	const LOVEFLAKE_MIN_SCALE = 0.1;
 	const MELTING_SPEED = 1.12;
 	const WIND_FORCE = 0.01;
