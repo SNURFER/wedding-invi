@@ -8,7 +8,7 @@
 	// share main image
 	const imageUrl = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg';
 	const title = '이시도와 장소영의 결혼식에 초대합니다.';
-	const description = '2023년 10월 21일 토요일 11시 서울대학교 교수회관';
+	const description = '2023년 10월 21일 토요일 11시 \n서울대학교 교수회관';
 
 	onMount(() => {
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);
