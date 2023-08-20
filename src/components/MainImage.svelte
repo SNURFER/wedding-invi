@@ -1,5 +1,5 @@
 <script lang="ts">
-	const imgURL = 'image/main_image.jpeg';
+	const imgURL = 'image/kakao_link_image.jpeg';
 	export let isTouched: boolean;
 </script>
 
