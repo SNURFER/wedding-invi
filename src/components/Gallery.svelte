@@ -51,8 +51,7 @@
 		'image/22.jpeg',
 		'image/23.jpeg',
 		'image/24.jpeg',
-		'image/25.jpeg',
-		'image/26.jpeg'
+		'image/25.jpeg'
 	];
 </script>
 
