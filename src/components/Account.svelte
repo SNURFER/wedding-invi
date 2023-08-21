@@ -17,7 +17,7 @@
 
 	const brideName = '장소영';
 	const brideBank = '국민';
-	const brideAccountNum = '079-80204-183334';
+	const brideAccountNum = '079802-04-183334';
 	const brideKakaoURL = 'https://qr.kakaopay.com/Ej8EyRNMa';
 
 	const brideMotherName = '차순희';
