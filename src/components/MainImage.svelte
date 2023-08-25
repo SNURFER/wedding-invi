@@ -8,11 +8,10 @@
 	<span class="px-3">이시도</span>
 	<button
 		on:click={() => {
-			// alert('since 2017/02/25, 하트수를 count 하자. 진입했을 때마다 딱 한번 밖에 못하게');
 			isTouched = !isTouched;
 		}}
 	>
-		<p class="btn rounded-full animate-bounce px-3 text-xl text-primary">🩷</p>
+		<p class="btn rounded-full animate-bounce px-3 text-xl text-primary">🩵</p>
 	</button>
 	<span class="px-3">장소영</span>
 </div>
