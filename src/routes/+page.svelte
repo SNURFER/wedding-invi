@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>이시도 🩷 장소영의 결혼식에 초대합니다.</title>
+	<title>이시도 ❤️ 장소영의 결혼식에 초대합니다.</title>
 </svelte:head>
 
 <Header />

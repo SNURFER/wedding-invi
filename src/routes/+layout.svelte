@@ -4,6 +4,6 @@
 </script>
 
 <Analytics />
-<div class="font-mywife max-w-3xl m-auto">
+<div class="font-mywife max-w-3xl m-auto relative">
 	<slot />
 </div>

@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	export let Kakao: any;
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import githubSquare from 'svelte-awesome/icons/githubSquare';
@@ -7,7 +11,7 @@
 
 	// share main image
 	const imageUrl = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg';
-	const title = '이시도 🩵 장소영의 결혼식에 초대합니다.';
+	const title = '이시도 ❤ 장소영의 결혼식에 초대합니다.';
 	const description = '2023년 10월 21일 토요일 11시 \n서울대학교 교수회관';
 
 	onMount(() => {
@@ -60,13 +64,13 @@
 
 <section>
 	<div class="text-center px-5 py-5">
-		<a
+		<div
 			id="kakao-share"
-			href="javascript:;"
 			role="button"
 			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[11px] font-medium text-base"
-			>카카오톡으로 공유</a
 		>
+			카카오톡으로 공유
+		</div>
 		<button
 			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={sharePage}>링크로 공유</button

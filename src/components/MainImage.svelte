@@ -11,7 +11,7 @@
 			isTouched = !isTouched;
 		}}
 	>
-		<p class="btn rounded-full animate-bounce px-3 text-xl text-primary">🩵</p>
+		<p class="btn rounded-full animate-bounce px-3 text-xl text-primary">❤</p>
 	</button>
 	<span class="px-3">장소영</span>
 </div>

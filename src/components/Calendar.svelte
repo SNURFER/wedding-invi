@@ -24,7 +24,7 @@
 		const gap = tarDate.getTime() - curDate.getTime();
 		const dday = Math.ceil(gap / (1000 * 60 * 60 * 24));
 		//TODO 숫자에만 하이라이트 빨간색으로
-		return '시도 🩵 소영 결혼식이 ' + dday.toString() + ' 일 남았습니다.';
+		return '시도 ❤ 소영 결혼식이 ' + dday.toString() + ' 일 남았습니다.';
 	}
 
 	function generateCalendarGrid() {
