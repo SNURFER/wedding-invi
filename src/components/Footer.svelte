@@ -1,7 +1,3 @@
-<script lang="ts" context="module">
-	export let Kakao: any;
-</script>
-
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import githubSquare from 'svelte-awesome/icons/githubSquare';
@@ -64,13 +60,14 @@
 
 <section>
 	<div class="text-center px-5 py-5">
-		<div
+		<a
 			id="kakao-share"
+			href="javascript:;"
 			role="button"
 			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[11px] font-medium text-base"
 		>
-			카카오톡으로 공유
-		</div>
+			카카오톡으로 공유</a
+		>
 		<button
 			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={sharePage}>링크로 공유</button
