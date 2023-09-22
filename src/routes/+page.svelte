@@ -18,10 +18,19 @@
 		// Perform any initialization or data fetching here
 	});
 	let isTouched: boolean = false;
+	const imageUrl = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg';
+	const siteUrl = 'https://wedding-invi-one.vercel.app';
+	const title = '이시도 ❤ 장소영의 결혼식에 초대합니다.';
+	const description = '2023년 10월 21일 토요일 11시 \n서울대학교 교수회관';
 </script>
 
 <svelte:head>
 	<title>이시도 ❤️ 장소영의 결혼식에 초대합니다.</title>
+	<meta property="og:title" content={title} />
+	<meta property="og:url" content={siteUrl} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content={imageUrl} />
 </svelte:head>
 
 <Header />
