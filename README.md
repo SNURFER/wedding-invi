@@ -15,6 +15,13 @@
   - MongoDB는 유연하고 확장 가능한 방식으로 데이터를 저장하고 검색하는 데 사용되는 인기 있는 오픈 소스 No SQL 데이터베이스
   - MongoDB atlas는 MongoDB의 완전 관리형 클라우드 데이터베이스 서비스
   - Vercel과의 연계성이 좋음
+ 
+## 프로젝트 아키텍처
+<img width="1336" alt="스크린샷 2023-10-07 오전 10 09 53" src="https://github.com/SNURFER/wedding-invi/assets/42398891/51abfd7e-08d9-4f2a-b6d1-394f462346b2">
+
+
+
+
 
 ## 개발 이유?
 
