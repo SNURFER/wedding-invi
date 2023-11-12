@@ -57,6 +57,7 @@
 			on:click={() => (overviewModal = true)}>전체보기</button
 		>
 		<button
+			disabled
 			class="btn inline-block text-black rounded bg-gray-200 px-2 m-2 pb-[5px] pt-[6px] font-medium text-base"
 			on:click={() => {
 				createModal = true;
@@ -73,6 +74,7 @@
 						<h1 class="text-base">{messageCard.name}</h1>
 						<div class="space-x-2">
 							<button
+								disabled
 								class="disabled:opacity-50"
 								on:click={() => {
 									messageID = messageCard._id;
@@ -85,6 +87,7 @@
 								<Icon data={edit} />
 							</button>
 							<button
+								disabled
 								class="disabled:opacity-50"
 								on:click={() => {
 									messageID = messageCard._id;
