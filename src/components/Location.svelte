@@ -49,7 +49,7 @@
 
 <svelte:head>
 	<script
-		src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId={env.PUBLIC_NAVER_API_KEY}"
+		src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId={env.PUBLIC_NAVER_API_KEY}"
 	></script>
 </svelte:head>
 
