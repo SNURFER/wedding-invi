@@ -3,15 +3,11 @@
 	import { env } from '$env/dynamic/public';
 
 	onMount(() => {
-		let mapOption = new naver.maps.Map('naverMap', {
-			center: new naver.maps.LatLng(37.45781, 126.954047), // 안내와 다르게 건물 근접 위,경도로 지정
-			zoom: 17
-		});
-
-		let marker = new naver.maps.Marker({
-			position: new naver.maps.LatLng(37.45781, 126.954047),
-			map: mapOption
-		});
+		var mapProp= {
+  			center:new google.maps.LatLng(37.45781, 126.954047),
+  			zoom:17,
+		};
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	});
 
 	//티맵 길안내
@@ -48,9 +44,9 @@
 </script>
 
 <svelte:head>
-	<script
-		src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId={env.PUBLIC_NAVER_API_KEY}"
-	></script>
+	<script 
+	src="https://maps.googleapis.com/maps/api/js?key={env.PUBLIC_GOOGLE_JS_KEY}">
+	</script>
 </svelte:head>
 
 <section>
@@ -60,8 +56,7 @@
 			<p>서울대학교 교수회관</p>
 			<p class="text-gray-500 text-base">서울 관악구 관악로 1 65동</p>
 		</div>
-
-		<div id="naverMap" class="w-full h-60" />
+		<div id="googleMap" class="w-full h-60" />
 		<div class="text-center px-1 py-5">
 			<a
 				id="kakao-navi"
