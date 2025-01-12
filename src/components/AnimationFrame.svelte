@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { brideName } from '../resource/input';
+	import { groomName } from '../resource/input';
 
 	export let isHeartMode: boolean;
 
@@ -11,7 +13,7 @@
 	const FALL_SPEED = 0.15;
 	let LOVE_ICONS = ['♡', '♥', '❤️', '❣️', '💕'];
 	if (!isHeartMode) {
-		LOVE_ICONS = ['시도', '소영'];
+		LOVE_ICONS = [groomName, brideName];
 	}
 
 	const TARGET_FPS = 60;

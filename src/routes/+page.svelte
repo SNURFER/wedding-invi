@@ -10,6 +10,7 @@
 	import Footer from '../components/Footer.svelte';
 	import GuestBook from '../components/GuestBook.svelte';
 	import Account from '../components/Account.svelte';
+	import {dday, mainDescription, mainImageURL, mainTitle, siteURL} from '../resource/input';
 
 	let guestMessages: Array<any> = [];
 	onMount(async () => {
@@ -18,14 +19,14 @@
 		// Perform any initialization or data fetching here
 	});
 	let isTouched: boolean = false;
-	const imageUrl = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg';
-	const siteUrl = 'https://wedding-invi-one.vercel.app';
-	const title = '이시도 ❤ 장소영의 결혼식에 초대합니다.';
-	const description = '2023년 10월 21일 토요일 11시 \n서울대학교 교수회관';
+	const imageUrl = mainImageURL;
+	const siteUrl = siteURL;
+	const title = mainTitle;
+	const description = mainDescription;
 </script>
 
 <svelte:head>
-	<title>이시도 ❤️ 장소영의 결혼식에 초대합니다.</title>
+	<title>{title}</title>
 	<meta property="og:title" content={title} />
 	<meta property="og:url" content={siteUrl} />
 	<meta property="og:description" content={description} />
@@ -37,7 +38,7 @@
 <MainImage bind:isTouched />
 <div class="divider py-10" />
 <MainMessage />
-<Calendar year={2023} month={10} theDay={21} />
+<Calendar year={dday[0]} month={dday[1]} theDay={dday[2]} />
 <div class="divider py-10" />
 <Gallery />
 <div class="divider py-10" />

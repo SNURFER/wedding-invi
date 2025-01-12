@@ -5,7 +5,7 @@
 	import trashO from 'svelte-awesome/icons/trashO';
 	import folderOpen from 'svelte-awesome/icons/folderOpen';
 	import GuestBookDialog from './GuestBookDialog.svelte';
-	import { DialogMode } from '../utils/utils';
+	import { DialogMode } from '../resource/utils';
 
 	export let guestMessages: Array<any>;
 	let createModal = false;

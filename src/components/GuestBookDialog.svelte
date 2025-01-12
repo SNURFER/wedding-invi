@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Modal } from 'flowbite-svelte';
-	import { DialogMode } from '../utils/utils';
+	import { DialogMode } from '../resource/utils';
 
 	export let modalStatus: boolean;
 	export let name: string = '';

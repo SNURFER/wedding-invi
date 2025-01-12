@@ -4,11 +4,12 @@
 	import { Icon } from 'svelte-awesome';
 	import { env } from '$env/dynamic/public';
 	import copy from 'copy-to-clipboard';
+	import { brideFullName, groomFullName, mainImageURL, dday, timeStr, poiName} from '../resource/input';
 
 	// share main image
-	const imageUrl = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg';
-	const title = '이시도 ❤ 장소영의 결혼식에 초대합니다.';
-	const description = '2023년 10월 21일 토요일 11시 \n서울대학교 교수회관';
+	const imageUrl = mainImageURL;
+	const title = groomFullName + ' ❤ ' + brideFullName + '의 결혼식에 초대합니다.';
+	const description = dday[0] + '년 ' + dday[1] + '월 ' + dday[2] + '일 ' + timeStr + ' \n' + poiName;
 
 	onMount(() => {
 		Kakao.init(env.PUBLIC_KAKAO_JS_KEY);

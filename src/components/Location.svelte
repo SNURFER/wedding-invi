@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { env } from '$env/dynamic/public';
+	import { poiName, address, latitude, longitude, privateCarMsg1, privateCarMsg2, privateCarMsg3, privateCarMsg4, privateCarMsg5, privateCarMsg6, publicTransportMsg1, publicTransportMsg2, publicTransportMsg3, publicTransportMsg4, publicTransportMsg5, mapImageSrc } from '../resource/input';
 
 	onMount(() => {
 		let mapOption = new naver.maps.Map('naverMap', {
@@ -57,15 +58,15 @@
 	<div class="py-5 mx-auto">
 		<h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-600">오시는 길</h1>
 		<div class="text-center py-2 text-xl">
-			<p>서울대학교 교수회관</p>
-			<p class="text-gray-500 text-base">서울 관악구 관악로 1 65동</p>
+			<p>{poiName}</p>
+			<p class="text-gray-500 text-base">{address}</p>
 		</div>
 
 		<div id="naverMap" class="w-full h-60" />
 		<div class="text-center px-1 py-5">
 			<a
 				id="kakao-navi"
-				href={kakaoMap('교수회관', 37.457414, 126.954494)}
+				href={kakaoMap(poiName, longitude, latitude)}
 				role="button"
 				class="btn rounded-lg mx-2"
 			>
@@ -74,7 +75,7 @@
 			</a>
 			<a
 				id="tmap-navi"
-				href={tMap('교수회관', 37.457414, 126.954494)}
+				href={tMap(poiName, longitude, latitude)}
 				role="button"
 				class="btn mx-2 rounded-lg"
 			>
@@ -83,7 +84,7 @@
 			</a>
 			<a
 				id="naver-navi"
-				href={naverMap('교수회관', 37.457414, 126.954494)}
+				href={naverMap(poiName, longitude, latitude)}
 				role="button"
 				class="btn mx-2 rounded-lg"
 			>
@@ -98,25 +99,25 @@
 			<div class="card p-4 my-2 bg-base-100 shadow-xl">
 				<h2 class="text-xl font-bold title-font">자가용</h2>
 				<p class="leading-relaxed mt-1 text-base">
-					- 서울대입구역, 낙성대역에서 택시로 5~10분 소요 <br />
-					- 내비게이션 : '서울대학교 교수회관' 또는 서울대학교 학군단' <br />
-					1. 서울대 후문으로 진입 시, 기숙사 삼거리에서 좌회전 후 400m 올라오십시오. <br />
-					2. 서울대 정문으로 진입 시, 기숙사 삼거리에서 오른쪽으로 400m 올라오십시오. <br />
-					// 낙성대 근처의 "호암교수회관" 아닙니다. <br />
-					// 2시간 무료 주차권 지급
+					{privateCarMsg1} <br />
+					{privateCarMsg2} <br />
+					{privateCarMsg3} <br />
+					{privateCarMsg4} <br />
+					{privateCarMsg5} <br />
+					{privateCarMsg6}	
 				</p>
 			</div>
 			<div class="card p-4 my-2 bg-base-100 shadow-xl">
-				<h2 class="text-xl font-bold title-font">대중교통(환승, 하차 시 약도 참조)</h2>
+				<h2 class="text-xl font-bold title-font">대중교통</h2>
 				<p class="leading-relaxed mt-1 text-base">
-					- 2호선 낙성대역(4번출구) ➡ GS 주유소끼고 좌회전 ➡ 제과점(장블랑제리) 앞에서 마을버스 2번
-					➡ '노천강당' 또는 '기초과학공동기기원, 교수회관' 정류장에서 하차 - 2호선 <br />
-					- 서울대입구역(3번출구) ➡ 5511버스 ➡ '기초과학공동기기원, 교수회관' 정류장에서 하차 <br />
-					- 신림선 관악산역(1번출구) ➡ 5516버스 ➡ '기초과학공동기기원' 정류장에서 하차 <br />
-					- 관악선역(1번출구) ➡ 5516버스 ➡ '기초과학공동기기원' 정류장에서 하차 <br />
+					{publicTransportMsg1}
+					{publicTransportMsg2} <br />
+					{publicTransportMsg3} <br />
+					{publicTransportMsg4} <br />
+					{publicTransportMsg5} <br />
 				</p>
 			</div>
-			<img src="image/map.png" class="mx-auto" alt="" />
+			<img src={mapImageSrc} class="mx-auto" alt="" />
 		</div>
 	</div>
 </section>

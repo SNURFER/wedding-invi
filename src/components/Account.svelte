@@ -1,32 +1,36 @@
 <script lang="ts">
 	import AccountItem from './AccountItem.svelte';
+	import { AccountInfo } from '../resource/input';
 
-	const groomName = '이시도';
-	const groomBank = '농협';
-	const groomAccountNum = '302-0930-5145-81';
-	const groomKakaoURL = 'https://qr.kakaopay.com/Ej8iC3z3c';
+	const groomName = AccountInfo.groomName;
+	const groomBank = AccountInfo.groomBank 
+	const groomAccountNum = AccountInfo.groomAccountNum;
+	const groomKakaoURL = AccountInfo.groomKakaoURL;
 
-	const groomFatherName = '이병문';
-	const groomFatherBank = '신한';
-	const groomFatherAccountNum = '371-02-492103';
+	const groomFatherName = AccountInfo.groomFatherName;
+	const groomFatherBank = AccountInfo.groomFatherBank;
+	const groomFatherAccountNum = AccountInfo.groomFatherAccountNum;
+	const groomFatherKakaoURL = AccountInfo.groomFatherKakaoURL;
 
-	const groomMotherName = '이명순';
-	const groomMotherBank = '국민';
-	const groomMotherAccountNum = '818-24-0059-439';
-	const groomMotherKakaoURL = 'https://qr.kakaopay.com/FGMga3UOB';
+	const groomMotherName = AccountInfo.groomMotherName;
+	const groomMotherBank = AccountInfo.groomMotherBank;
+	const groomMotherAccountNum = AccountInfo.groomMotherAccountNum;
+	const groomMotherKakaoURL = AccountInfo.groomMotherKakaoURL;
 
-	const brideName = '장소영';
-	const brideBank = '국민';
-	const brideAccountNum = '079802-04-183334';
-	const brideKakaoURL = 'https://qr.kakaopay.com/Ej8EyRNMa';
+	const brideName = AccountInfo.brideName;
+	const brideBank = AccountInfo.brideBank;
+	const brideAccountNum = AccountInfo.brideAccountNum;
+	const brideKakaoURL = AccountInfo.brideKakaoURL;
 
-	const brideMotherName = '차순희';
-	const brideMotherBank = '신한';
-	const brideMotherAccountNum = '110-197-124820';
+	const brideMotherName = AccountInfo.brideMotherName;
+	const brideMotherBank = AccountInfo.brideMotherBank;
+	const brideMotherAccountNum = AccountInfo.brideMotherAccountNum;
+	const brideMotherKakaoURL = AccountInfo.brideMotherKakaoURL;
 
-	const brideFatherName = '장재만';
-	const brideFatherBank = '농협';
-	const brideFatherAccountNum = '333-02-423841';
+	const brideFatherName = AccountInfo.brideFatherName;
+	const brideFatherBank = AccountInfo.brideFatherBank;
+	const brideFatherAccountNum = AccountInfo.brideFatherAccountNum;
+	const brideFatherKakaoURL = AccountInfo.brideFatherKakaoURL;
 </script>
 
 <div class="py-5 mb-20">
@@ -39,7 +43,12 @@
 			accountNum={groomAccountNum}
 			kakaoURL={groomKakaoURL}
 		/>
-		<AccountItem name={groomFatherName} bank={groomFatherBank} accountNum={groomFatherAccountNum} />
+		<AccountItem 
+			name={groomFatherName} 
+			bank={groomFatherBank} 
+			accountNum={groomFatherAccountNum} 
+			kakaoURL={groomFatherKakaoURL} 
+		/>
 		<AccountItem
 			name={groomMotherName}
 			bank={groomMotherBank}
@@ -55,7 +64,17 @@
 			accountNum={brideAccountNum}
 			kakaoURL={brideKakaoURL}
 		/>
-		<AccountItem name={brideFatherName} bank={brideFatherBank} accountNum={brideFatherAccountNum} />
-		<AccountItem name={brideMotherName} bank={brideMotherBank} accountNum={brideMotherAccountNum} />
+		<AccountItem 
+			name={brideFatherName} 
+			bank={brideFatherBank} 
+			accountNum={brideFatherAccountNum} 
+			kakaoURL={brideFatherKakaoURL} 
+		/>
+		<AccountItem 
+			name={brideMotherName} 
+			bank={brideMotherBank} 
+			accountNum={brideMotherAccountNum} 
+			kakaoURL={brideMotherKakaoURL}
+		/>
 	</details>
 </div>
