@@ -1,15 +1,15 @@
 
 // main title
 
-export const mainTitle = '이신랑 ❤ 장신부의 결혼식에 초대합니다.'
-export const mainDescription = '2023년 10월 21일 토요일 11시 \n ABC 웨딩홀'
+export const mainTitle = '곽기광 ❤ 곽신부의 결혼식에 초대합니다.'
+export const mainDescription = '2025년 4월 21일 토요일 11시 \n ABC 웨딩홀'
 
 // main info
-export const brideName = '이름'
-export const groomName = '이름'
+export const brideName = '신부'
+export const groomName = '기광'
 
-export const brideFullName = '성이름'
-export const groomFullName = '성이름'
+export const brideFullName = '곽신부'
+export const groomFullName = '곽기광'
 
 // account info 
 export const AccountInfo = {
