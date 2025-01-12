@@ -11,9 +11,9 @@ export async function connectToDatabase() {
 	}
 	mongoClient = await new MongoClient(MONGO_URL).connect();
 	if (VITE_NODE_ENV === 'develop') {
-		database = await mongoClient.db('wedding-invi-dev');
+		database = await mongoClient.db('wedding-invi-kkk-dev');
 	} else {
-		database = await mongoClient.db('wedding-invi');
+		database = await mongoClient.db('wedding-invi-kkk');
 	}
 	return { mongoClient, database };
 }
