@@ -5,12 +5,12 @@
 
 	onMount(() => {
 		let mapOption = new naver.maps.Map('naverMap', {
-			center: new naver.maps.LatLng(37.45781, 126.954047), // 안내와 다르게 건물 근접 위,경도로 지정
+			center: new naver.maps.LatLng(longitude, latitude), // 안내와 다르게 건물 근접 위,경도로 지정
 			zoom: 17
 		});
 
 		let marker = new naver.maps.Marker({
-			position: new naver.maps.LatLng(37.45781, 126.954047),
+			position: new naver.maps.LatLng(longitude, latitude),
 			map: mapOption
 		});
 	});
