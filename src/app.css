@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'clova-ai-rose';
+	/* font-family: 'clova-ai-rose'; */
+	font-family: 'NanumGothic';
 	/* src: url('/clova_ai_rose.ttf'); */
-	src: url('/NanumJangMiCe.woff2') format(woff2);
+	/* src: url('/NanumJangMiCe.woff2') format(woff2); */
+	src: url('/NanumGothicBold.woff2') format(woff2);
 }
