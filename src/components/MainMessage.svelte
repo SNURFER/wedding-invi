@@ -5,10 +5,10 @@
 </script>
 <h1 class="mb-8 text-3xl md:text-3xl font-bold text-center text-stone-600">모시는 말씀</h1>
 <div class="container mx-auto relative">
-	<img src="/image/message_image8.png" alt="" class="w-full h-auto" />
+	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
 	<div class="absolute inset-0 flex items-center justify-center rounded-lg">
 		<div class="w-full mx-auto text-center">
-			<p class="leading-relaxed text-xl">
+			<p class="leading-relaxed text-l">
 				{mainMsg1}<br />
 				{mainMsg2}<br />
 				{mainMsg3}<br />
@@ -16,7 +16,7 @@
 				{mainMsg5}<br />
 				{mainMsg6}<br />
 			</p>
-			<p class="leading-relaxed text-xl py-3">
+			<p class="leading-relaxed text-l py-3">
 				{mainMsg7}<br />
 				{mainMsg8}<br />
 			</p>

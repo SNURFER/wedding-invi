@@ -82,8 +82,8 @@ export const mainMsg4 = '쓸쓸하지만 포근한 겨울길을'
 export const mainMsg5 = '둘이서 걸어가려고 합니다. '
 
 export const mainMsg6 = '바쁘시더라도 발걸음 내주시어'
-export const mainMsg7 = '저희에게 희망을 주시는 봄날의 단비가 되어 주시기 바랍니다 '
-export const mainMsg8 = ''
+export const mainMsg7 = '저희에게 희망을 주시는' 
+export const mainMsg8 = '봄날의 단비가 되어 주시기 바랍니다'
 
 // resource path
 export const mapImageSrc = "image/map.png"
