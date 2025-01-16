@@ -97,6 +97,6 @@ export let images: string[] = [
     'image/7.jpeg',
 ];
 
-export const mainImageURL = 'image/kakao_link_image.jpeg';
-//export const mainImageURL = 'https://wedding-invi-one.vercel.app/image/kakao_link_image.jpeg'; 
+// export const mainImageURL = 'image/kakao_link_image.jpeg';
+export const mainImageURL = 'https://wedding-invi-kkk.vercel.app/image/kakao_link_image.jpeg'; 
 export const siteURL = 'https://wedding-invi-kkk.vercel.app'
