@@ -117,7 +117,7 @@
 					{publicTransportMsg5} <br />
 				</p>
 			</div>
-			<img src={mapImageSrc} class="mx-auto" alt="" />
+			<!-- <img src={mapImageSrc} class="mx-auto" alt="" /> -->
 		</div>
 	</div>
 </section>
