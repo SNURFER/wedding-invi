@@ -8,7 +8,7 @@
 	<img src="/image/message_image.jpg" alt="" class="w-full h-auto" />
 	<div class="absolute inset-0 flex items-center justify-center rounded-lg">
 		<div class="w-full mx-auto text-center">
-			<p class="leading-relaxed text-l">
+			<p class="leading-relaxed text-sm">
 				{mainMsg1}<br />
 				{mainMsg2}<br />
 				{mainMsg3}<br />
@@ -16,12 +16,15 @@
 				{mainMsg5}<br />
 				{mainMsg6}<br />
 			</p>
-			<p class="leading-relaxed text-l py-3">
+			<p class="leading-relaxed text-sm py-3">
 				{mainMsg7}<br />
 				{mainMsg8}<br />
 			</p>
 		</div>
 	</div>
+	<p class="absolute bottom-2 right-2 text-gray-200 text-xs">
+		Designed by Freepik
+	</p>
 </div>
 <div class="text-center mx-auto">
 	<div class="w-full mx-auto px-5 py-5">
