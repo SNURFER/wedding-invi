@@ -52,7 +52,7 @@ export const AccountInfo = {
 // date, place 
 export const dday = [2025, 4, 5]
 export const timeStr = '토요일 2시 00분 '
-export const poiSubText = 'subtext'
+export const poiSubText = '따뜻한 봄날'
 export const poiName = '프란치스코 교육회관 성당'
 export const address = '대한민국 서울특별시 중구 정동길 9'
 
