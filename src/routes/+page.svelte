@@ -49,8 +49,4 @@
 <Account />
 <Footer />
 
-{#if !isTouched}
-	<AnimationFrame isHeartMode={true} />
-{:else}
-	<AnimationFrame isHeartMode={false} />
-{/if}
+<AnimationFrame isHeartMode={true} />
