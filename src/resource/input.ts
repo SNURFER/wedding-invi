@@ -31,7 +31,7 @@ export const AccountInfo = {
    brideName : '신지현',
    brideBank : '신한',
    brideAccountNum : '110-307-221742',
-   brideKakaoURL : '',
+   brideKakaoURL : 'https://qr.kakaopay.com/FIQdLucgy',
     
    brideMotherName : '이종화',
    brideMotherBank : '신한',
