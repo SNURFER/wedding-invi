@@ -1,7 +1,7 @@
 // main title
 
 export const mainTitle = '곽기광 안드레아 ❤ 신지현 마틸다의 결혼식에 초대합니다.'
-export const mainDescription = '2025년 4월 5일 토요일 2시 \n 프란치스코 교육회관 성당'
+export const mainDescription = '2025년 4월 5일 토요일 14시 \n 프란치스코 교육회관 성당'
 
 // main info
 export const brideName = '지현 마틸다'
@@ -16,31 +16,31 @@ export const AccountInfo = {
    groomName : '곽기광',
    groomBank : '신한 ',
    groomAccountNum : '110-410-540428',
-   groomKakaoURL : '',
+   groomKakaoURL : 'https://qr.kakaopay.com/FafHJEmKC',
    
    groomFatherName : '곽길섭',
    groomFatherBank : '국민',
    groomFatherAccountNum : '027-21-0378-081',
-   groomFatherKakaoURL : '',
+   groomFatherKakaoURL : 'https://qr.kakaopay.com/FEGZSUvbk ',
    
    groomMotherName : '권미애',
    groomMotherBank : '국민',
-   groomMotherAccountNum : '111-111-11111-11',
-   groomMotherKakaoURL : '',
+   groomMotherAccountNum : '063-24-0056-684',
+   groomMotherKakaoURL : 'https://qr.kakaopay.com/FLI9F0ng4 ',
     
    brideName : '신지현',
-   brideBank : '국민',
-   brideAccountNum : '1231-123123-12312',
+   brideBank : '신한',
+   brideAccountNum : '110-307-221742',
    brideKakaoURL : 'https://qr.kakaopay.com/Ej8EyRNMa',
     
-   brideMotherName : '신부모',
+   brideMotherName : '이종화',
    brideMotherBank : '신한',
-   brideMotherAccountNum : '11111-111-1111',
+   brideMotherAccountNum : '110-307-221742',
    brideMotherKakaoURL : '',
     
-   brideFatherName : '신부부',
-   brideFatherBank : '농협',
-   brideFatherAccountNum : '1233-1231-12311',
+   brideFatherName : '신규식',
+   brideFatherBank : '신한',
+   brideFatherAccountNum : '110-307-221742',
    brideFatherKakaoURL : '',
 
    groomOrder : "장남",
@@ -51,8 +51,8 @@ export const AccountInfo = {
 
 // date, place 
 export const dday = [2025, 4, 5]
-export const timeStr = '토요일 2시 00분 '
-export const poiSubText = '따뜻한 봄날'
+export const timeStr = '토요일 14시'
+export const poiSubText = ''
 export const poiName = '프란치스코 교육회관 성당'
 export const address = '대한민국 서울특별시 중구 정동길 9'
 
@@ -62,17 +62,17 @@ export const latitude: number = 126.970284
 // location string
 export const privateCarMsg1 = '- 서울시 중구 정동길 9 프란치스코 교육회관 02-6364-2245 '
 export const privateCarMsg2 = "- 내비게이션 : '프란치스코 교육회관’ 또는 ‘이화정동빌딩’ "
-export const privateCarMsg3 = ' 주차정보 : 이화정동빌딩에 주차를 하시고 프란치스코 교육회관 성당으로 오시면 됩니다.  '
-export const privateCarMsg4 = ' 프란치스코 교육회관 건물내 주차는 불가하니 이화정동빌딩을 이용해 주시기 바랍니다.'
-export const privateCarMsg5 = '주차공간이 협소한 점, 주말 시내 교통체증을 감안해 주시어 가급적 대중교통을 이용해 주시기 바랍니다.'
+export const privateCarMsg3 = '- 주차정보 : 되도록 대중교통 이용을 부탁 드리며, 부득이 자가용을 이용하시는 경우 이화정동빌딩 주차장을 이용 바랍니다.'
+export const privateCarMsg4 = ' 프란치스코 교육회관 건물 내 주차는 불가합니다.'
+export const privateCarMsg5 = ' '
 export const privateCarMsg6 = ' '
 
-export const publicTransportMsg1 = "지하철 5호선 서대문역 : 5번출구에서 경향신문사 방향으로 5분 거리"
-export const publicTransportMsg2 = "1,2호선 시청역 : 1,2,12번 출구 (덕수궁방향)에서 덕수궁길을 따라 15분 거래  "
-export const publicTransportMsg3 = "시내버스 파란색 간선버스 101, 103, 160, 260, 270, 271, 273, 370, 470, 600, 601, 602, 702A, 702B, 704, 705, 720, 721, 741 101, 103, 160, 260, 270, 271, 273, 370, 470, 600, 601, 602, 702A, 702B, 704, 705, 720, 721, 741"
-export const publicTransportMsg4 = "초록색 일반버스 : 1002, 7019"
-export const publicTransportMsg5 = "빨간색 광역버스 :  1004, 9701, 9709, 9709A, 9710, 9710-1, 8600, 8601"    
-export const publicTransportMsg6 = " "
+export const publicTransportMsg1 = "- 지하철 :"
+export const publicTransportMsg2 = "5호선 서대문역 5번 출구에서 경향신문사 방향으로 5분 거리"
+export const publicTransportMsg3 = "1,2호선 시청역 1,2,12번 출구 (덕수궁방향)에서 덕수궁길을 따라 15분 거리"
+export const publicTransportMsg4 = "- 버스 :"
+export const publicTransportMsg5 = "간선버스 101, 103, 160, 260, 270, 271, 273 등"
+export const publicTransportMsg6 = "광역버스 1004, 9701, 9709, 9709A, 9710, 9710-1, 8600, 8601"
 
 //main message text
 export const mainMsg1 = '서로의 일렁이는 봄날에 만나게 되었습니다. '
@@ -94,7 +94,6 @@ export let images: string[] = [
     'image/4.jpeg',
     'image/5.jpeg',
     'image/6.jpeg',
-    'image/7.jpeg',
 ];
 
 // export const mainImageURL = 'image/kakao_link_image.jpeg';
