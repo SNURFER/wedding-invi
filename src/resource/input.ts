@@ -93,7 +93,6 @@ export let images: string[] = [
     'image/3.jpeg',
     'image/4.jpeg',
     'image/5.jpeg',
-    'image/6.jpeg',
 ];
 
 // export const mainImageURL = 'image/kakao_link_image.jpeg';
