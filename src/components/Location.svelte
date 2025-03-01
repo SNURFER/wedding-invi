@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { env } from '$env/dynamic/public';
-	import { poiName, address, latitude, longitude, privateCarMsg1, privateCarMsg2, privateCarMsg3, privateCarMsg4, privateCarMsg5, privateCarMsg6, publicTransportMsg1, publicTransportMsg2, publicTransportMsg3, publicTransportMsg4, publicTransportMsg5, publicTransportMsg6, mapImageSrc } from '../resource/input';
+	import { poiName, address, latitude, longitude, privateCarMsg1, privateCarMsg2, privateCarMsg3, privateCarMsg4, privateCarMsg5, privateCarMsg6, publicTransportMsg1, publicTransportMsg2, publicTransportMsg3, publicTransportMsg4, publicTransportMsg5, publicTransportMsg6, mapImageSrc, infoMsg1, infoMsg2, infoMsg3,infoMsg4 } from '../resource/input';
 
 	onMount(() => {
 		let mapOption = new naver.maps.Map('naverMap', {
@@ -116,6 +116,15 @@
 					{publicTransportMsg4} <br />
 					{publicTransportMsg5} <br />
 					{publicTransportMsg6} <br />
+				</p>
+			</div>
+			<div class="card p-4 my-2 bg-base-100 shadow-xl">
+				<h2 class="text-xl font-bold title-font">안내말씀</h2>
+				<p class="leading-relaxed mt-1 text-base">
+					{infoMsg1} <br />
+					{infoMsg2} <br /><br />
+					{infoMsg3} <br /><br />
+					{infoMsg4} <br />
 				</p>
 			</div>
 			<!-- <img src={mapImageSrc} class="mx-auto" alt="" /> -->

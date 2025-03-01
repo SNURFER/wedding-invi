@@ -74,6 +74,11 @@ export const publicTransportMsg4 = "- 버스 :"
 export const publicTransportMsg5 = "간선버스 101, 103, 160, 260, 270, 271, 273 등"
 export const publicTransportMsg6 = "광역버스 1004, 9701, 9709, 9709A, 9710, 9710-1, 8600, 8601"
 
+export const infoMsg1 = "축하화환은 성당 내 반입이 불가합니다."
+export const infoMsg2 = "다만 '쌀 화환'과 '축하기'에 한하여 반입 가능하며, 보내주신 쌀 화환은 어려운 이웃을 위하여 기부됩니다."
+export const infoMsg3 = " * 쌀 화환: 쌀 포대에 간단한 리본이 붙은 화환으로 화원에 성당에 보내실 예정이라고 말씀해주시면 됩니다."
+export const infoMsg4 = "혹여 축하화환을 보내실 경우, 성당 측에서 불가피하게 반환 처리하게 되므로 양해하여 주시면 감사드리겠습니다."
+
 //main message text
 export const mainMsg1 = '서로의 일렁이는 봄날에 만나게 되었습니다. '
 export const mainMsg2 = '덥고도 푸릇한 여름길을 함께 지나고 '
